@@ -4,15 +4,30 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.sql.Connection;
+import java.sql.Driver;
+import java.sql.DriverManager;
+import java.sql.SQLException;
 
-@WebServlet(name="hello",urlPatterns={"/hello"}) // added this line
+@WebServlet(name="hello",urlPatterns={"/hello"})
 
 public class HelloController extends HttpServlet {
     @Override
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
+        try {
+            Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
+        } catch (ClassNotFoundException e) {
+            throw new RuntimeException(e);
+        }
+        String connectionUrl = "jdbc:sqlserver://localhost:1433;databaseName=AdventureWorks;user=MyUserName;password=*****;encrypt=false;";
+        try {
+            Connection con = DriverManager.getConnection(connectionUrl);
+            System.out.println(con);
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
         PrintWriter out = response.getWriter();
         out.println("this is a test hellllo");
     }
