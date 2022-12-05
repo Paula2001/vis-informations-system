@@ -18,7 +18,7 @@ public class HelloController extends Controller{
         PrintWriter writer = response.getWriter();
         try {
 
-            Connection conn = databaseConnection.getConnection();
+            Connection conn = DATABASE_CONNECTION.getConnection();
 
             System.out.println(conn);
 
