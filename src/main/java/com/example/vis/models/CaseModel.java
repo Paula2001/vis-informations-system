@@ -1,13 +1,13 @@
 package com.example.vis.models;
 
-public class UserModel extends Model<CaseModel> {
+public class CaseModel extends Model<CaseModel> {
     private final int id ;
     private final String dataOfBirth;
     private final String name;
     private final String email;
     private final String password;
 
-    public UserModel(int id, String dataOfBirth, String name, String email, String password) {
+    public CaseModel(int id, String dataOfBirth, String name, String email, String password) {
         this.id = id;
         this.dataOfBirth = dataOfBirth;
         this.name = name;

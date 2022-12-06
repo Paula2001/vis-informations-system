@@ -1,6 +1,7 @@
 package com.example.vis.controllers;
 
 
+import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
@@ -12,7 +13,6 @@ import java.sql.Statement;
 
 public class HelloController extends Controller{
 
-
     @Override
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
         PrintWriter writer = response.getWriter();
@@ -23,8 +23,7 @@ public class HelloController extends Controller{
             System.out.println(conn);
 
             Statement statement = conn.createStatement();
-            String sql = "SELECT * FROM actor ;";
-            ResultSet rs = statement.executeQuery(sql);
+            ResultSet rs = DATABASE_CONNECTION.select("actor","*","");
             int count = 1;
             while (rs.next()) {
                 writer.println(String.format("User #%d: %-15s %s", count++,
