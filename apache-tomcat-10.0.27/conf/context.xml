@@ -28,6 +28,7 @@
     <!--
     <Manager pathname="SESSIONS.ser" />
     -->
+
     <Resource
         name="jdbc/UsersDB"
         auth="Container"

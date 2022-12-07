@@ -4741,5 +4741,17 @@
         <welcome-file>index.htm</welcome-file>
         <welcome-file>index.jsp</welcome-file>
     </welcome-file-list>
+    <!-- The servlets configuration -->
+    <servlet>
+        <description>This is the description of my J2EE component</description>
+        <display-name>This is the display name of my J2EE component</display-name>
+        <servlet-name>hello</servlet-name>
+        <servlet-class>com.example.vis.controllers.HelloController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>hello</servlet-name>
+        <url-pattern>/soso</url-pattern>
+    </servlet-mapping>
+    <!-- The servlets configuration -->
 
 </web-app>

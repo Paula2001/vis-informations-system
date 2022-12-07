@@ -3,28 +3,23 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
          version="4.0">
+
     <servlet>
         <description>This is the description of my J2EE component</description>
         <display-name>This is the display name of my J2EE component</display-name>
-        <servlet-name>servlet1</servlet-name>
+        <servlet-name>hello</servlet-name>
         <servlet-class>com.example.vis.controllers.HelloController</servlet-class>
-        <load-on-startup>1</load-on-startup>
     </servlet>
     <servlet-mapping>
-        <servlet-name>servlet1</servlet-name>
+        <servlet-name>hello</servlet-name>
         <url-pattern>/soso</url-pattern>
     </servlet-mapping>
-    <resource-ref>
-        <description>DB Connection</description>
-        <res-ref-name>jdbc/UsersDB</res-ref-name>
-        <res-type>javax.sql.DataSource</res-type>
-        <res-auth>Container</res-auth>
-    </resource-ref>
-    <connection-factory>
-        <name>databaseConnection</name>
-        <interface-name>com.example.vis.database.DatabaseConnection</interface-name>
-        <resource-adapter>com.example.vis.database.SQLConnection</resource-adapter>
-    </connection-factory>
+<!--    <resource-ref>-->
+<!--        <description>DB Connection</description>-->
+<!--        <res-ref-name>jdbc/UsersDB</res-ref-name>-->
+<!--        <res-type>javax.sql.DataSource</res-type>-->
+<!--        <res-auth>Container</res-auth>-->
+<!--    </resource-ref>-->
 <!--    <servlet>-->
 <!--        <servlet-name>servlet2</servlet-name>-->
 <!--        <servlet-class>com.javatpoint.SecondServlet</servlet-class>-->
