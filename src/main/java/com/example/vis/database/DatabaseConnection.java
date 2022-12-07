@@ -9,5 +9,5 @@ import javax.naming.NamingException;
 public interface DatabaseConnection<T> {
     T getConnection() throws SQLException, NamingException;
 
-    ResultSet select(String resource,String cols, String where) throws SQLException, NamingException;
+    ResultSet select(String resource,String cols, String where);
 }

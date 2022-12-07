@@ -1,6 +1,9 @@
 package com.example.vis.models;
 
-public class TutorialModel extends Model<CaseModel> {
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+public class TutorialModel extends Model<TutorialModel> {
     private final int id ;
     private final String name;
     private final String description;
@@ -21,5 +24,15 @@ public class TutorialModel extends Model<CaseModel> {
 
     public String getDescription() {
         return description;
+    }
+
+    @Override
+    protected String getTableName() {
+        return "tutorial";
+    }
+
+    @Override
+    protected TutorialModel getModelInstance(ResultSet result) throws SQLException {
+        return null;
     }
 }

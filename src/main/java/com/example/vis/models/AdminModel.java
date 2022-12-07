@@ -1,17 +1,14 @@
 package com.example.vis.models;
 
-public class AdminModel extends Model<CaseModel> {
-    private final int id ;
-    private final String name;
-    private final String email;
-    private final String password;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 
-    public AdminModel(int id, String name, String email, String password) {
-        this.id = id;
-        this.name = name;
-        this.email = email;
-        this.password = password;
-    }
+public class AdminModel extends Model<AdminModel> {
+    private int id ;
+    private String name;
+    private String email;
+    private String password;
+
 
     public int getId() {
         return id;
@@ -27,5 +24,23 @@ public class AdminModel extends Model<CaseModel> {
 
     public String getPassword() {
         return password;
+    }
+
+    @Override
+    protected String getTableName() {
+        return "admin";
+    }
+
+    @Override
+    protected AdminModel getModelInstance(ResultSet result) {
+        try {
+            this.id = Integer.parseInt(result.getString("id"));
+            this.name = result.getString("name");
+            this.email = result.getString("email");
+            this.password = result.getString("password");
+        }catch (SQLException e){
+            System.out.println(e.getMessage());
+        }
+        return this;
     }
 }

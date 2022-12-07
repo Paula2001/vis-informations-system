@@ -1,6 +1,9 @@
 package com.example.vis.models;
 
-public class ParamedicModel extends Model<CaseModel> {
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+public class ParamedicModel extends Model<ParamedicModel> {
     private final int id ;
     private final String dataOfBirth;
     private final String name;
@@ -39,5 +42,15 @@ public class ParamedicModel extends Model<CaseModel> {
 
     public String getIsAuthorized() {
         return isAuthorized;
+    }
+
+    @Override
+    protected String getTableName() {
+        return "paramedic";
+    }
+
+    @Override
+    protected ParamedicModel getModelInstance(ResultSet result) throws SQLException {
+        return null;
     }
 }

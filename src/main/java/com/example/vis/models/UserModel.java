@@ -1,6 +1,9 @@
 package com.example.vis.models;
 
-public class UserModel extends Model<CaseModel> {
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+public class UserModel extends Model<UserModel> {
     private final int id ;
     private final String dataOfBirth;
     private final String name;
@@ -32,5 +35,15 @@ public class UserModel extends Model<CaseModel> {
 
     public String getPassword() {
         return password;
+    }
+
+    @Override
+    protected String getTableName() {
+        return "user";
+    }
+
+    @Override
+    protected UserModel getModelInstance(ResultSet result) throws SQLException {
+        return null;
     }
 }

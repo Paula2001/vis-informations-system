@@ -1,6 +1,9 @@
 package com.example.vis.models;
 
-public class CertificationModel extends Model<CaseModel> {
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+public class CertificationModel extends Model<CertificationModel> {
     private final int id ;
     private final String issuedAt;
     private final ParamedicModel paramedic;
@@ -27,5 +30,15 @@ public class CertificationModel extends Model<CaseModel> {
 
     public String getTutorial() {
         return tutorial;
+    }
+
+    @Override
+    protected String getTableName() {
+        return "certification";
+    }
+
+    @Override
+    protected CertificationModel getModelInstance(ResultSet result) throws SQLException {
+        return null;
     }
 }

@@ -21,7 +21,7 @@ public class SQLConnection implements DatabaseConnection<Connection>{
         return ds.getConnection();
     }
 
-    public ResultSet select(String resource,String cols, String where) throws SQLException, NamingException {
+    public ResultSet select(String resource,String cols, String where) {
         String sqlQ = (new StringBuilder())
                 .append("SELECT")
                 .append(" ")
@@ -32,8 +32,15 @@ public class SQLConnection implements DatabaseConnection<Connection>{
                 .append(where)
                 .append(" ")
                 .toString();
-        Statement statement = this.getConnection().createStatement();
-        return statement.executeQuery(sqlQ);
+        ResultSet result = null;
+        try {
+            Statement statement = this.getConnection().createStatement();
+            result = statement.executeQuery(sqlQ);
+        } catch (SQLException|NamingException e) {
+            // TODO : should log the error message
+            System.out.println(e.getMessage());
+        }
+        return result;
     }
 
     public void insertMany() {

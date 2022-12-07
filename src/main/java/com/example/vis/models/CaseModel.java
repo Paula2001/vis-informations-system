@@ -1,5 +1,8 @@
 package com.example.vis.models;
 
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
 public class CaseModel extends Model<CaseModel> {
     private final int id ;
     private final String dataOfBirth;
@@ -32,5 +35,15 @@ public class CaseModel extends Model<CaseModel> {
 
     public String getPassword() {
         return password;
+    }
+
+    @Override
+    protected String getTableName() {
+        return "cases";
+    }
+
+    @Override
+    protected CaseModel getModelInstance(ResultSet result) throws SQLException {
+        return null;
     }
 }
