@@ -14,7 +14,10 @@
     <title>Title</title>
 </head>
 <body>
-<%@include file="navbar.jsp"%>
+<%@include file="components/navbar.jsp"%>
+<%@include file="components/slideshow.jsp"%>
+
+
 <p><%=request.getContextPath()%></p>
 <p><%=request.getAttribute("email")%></p>
 </body>
