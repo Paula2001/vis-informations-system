@@ -4735,21 +4735,19 @@
   <!-- deployment descriptor, that list *replaces* the list configured      -->
   <!-- here, so be sure to include any of the default values that you wish  -->
   <!-- to use within your application.                                       -->
-
+    <!-- The servlets configuration -->
     <welcome-file-list>
-        <welcome-file>index.html</welcome-file>
-        <welcome-file>index.htm</welcome-file>
         <welcome-file>index.jsp</welcome-file>
     </welcome-file-list>
-    <!-- The servlets configuration -->
+
     <servlet>
         <description>This is the description of my J2EE component</description>
         <display-name>This is the display name of my J2EE component</display-name>
-        <servlet-name>hello</servlet-name>
+        <servlet-name>main</servlet-name>
         <servlet-class>com.example.vis.controllers.HelloController</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>hello</servlet-name>
+        <servlet-name>main</servlet-name>
         <url-pattern>/soso</url-pattern>
     </servlet-mapping>
     <welcome-file-list>
