@@ -1,5 +1,4 @@
-<div class="container">
-  <h2>Carousel Example</h2>
+<div class="main-container">
   <div id="myCarousel" class="carousel slide" data-ride="carousel">
     <!-- Indicators -->
     <ol class="carousel-indicators">
@@ -11,15 +10,15 @@
     <!-- Wrapper for slides -->
     <div class="carousel-inner">
       <div class="item active">
-        <img src="la.jpg" alt="Los Angeles" style="width:100%;">
+        <img src="images/offset_comp_772626-opt.jpg" alt="Los Angeles" style="width:100%;">
       </div>
 
       <div class="item">
-        <img src="chicago.jpg" alt="Chicago" style="width:100%;">
+        <img src="images/offset_comp_772626-opt.jpg" alt="Chicago" style="width:100%;">
       </div>
 
       <div class="item">
-        <img src="ny.jpg" alt="New york" style="width:100%;">
+        <img src="images/offset_comp_772626-opt.jpg" alt="New york" style="width:100%;">
       </div>
     </div>
 
@@ -34,3 +33,9 @@
     </a>
   </div>
 </div>
+
+<style>
+  .main-container{
+    margin: 2%;
+  }
+</style>
