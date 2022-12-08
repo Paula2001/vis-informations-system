@@ -29,7 +29,7 @@
             Close your eyes and imagine ...
             <br />
             Imagine it's 5 p.m and the whole city is on the streets, and you are sitting
-            sweating and dying to get home but suddenly the man / women next you got a
+            sweating and dying to get home but suddenly the man / woman next you got a
             heart attack you are trying to save him / her by calling the ambulance but for a
             nearby ambulance to show up we will need up to 5 min.s and that if you are
             living in a ghost town not in the rush hour and during heavy traffic,
