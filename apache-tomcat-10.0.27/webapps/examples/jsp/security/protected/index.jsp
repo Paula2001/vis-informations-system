@@ -155,7 +155,7 @@ To add some data to the authenticated session, enter it here:
 
 If you have configured this application for form-based authentication, you can
 log off by clicking
-<a href='<%= response.encodeURL("index.jsp?logoff=true") %>'>here</a>.
+<a href='<%= response.encodeURL("index.jsp") %>'>here</a>.
 This should cause you to be returned to the login page after the redirect
 that is performed.
 

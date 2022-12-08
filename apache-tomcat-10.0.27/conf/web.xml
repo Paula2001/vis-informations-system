@@ -4752,6 +4752,9 @@
         <servlet-name>hello</servlet-name>
         <url-pattern>/soso</url-pattern>
     </servlet-mapping>
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
     <!-- The servlets configuration -->
 
 </web-app>

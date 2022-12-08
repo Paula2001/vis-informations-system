@@ -1,0 +1,775 @@
+07-Dec-2022 11:07:18.407 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/10.0.27
+07-Dec-2022 11:07:18.411 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Oct 3 2022 14:18:31 UTC
+07-Dec-2022 11:07:18.411 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 10.0.27.0
+07-Dec-2022 11:07:18.412 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Linux
+07-Dec-2022 11:07:18.412 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            6.0.6-76060006-generic
+07-Dec-2022 11:07:18.412 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+07-Dec-2022 11:07:18.412 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /opt/jdk-18
+07-Dec-2022 11:07:18.412 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           18+36-2087
+07-Dec-2022 11:07:18.412 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+07-Dec-2022 11:07:18.412 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /home/paula/VIS/apache-tomcat-10.0.27
+07-Dec-2022 11:07:18.412 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /home/paula/VIS/apache-tomcat-10.0.27
+07-Dec-2022 11:07:18.423 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+07-Dec-2022 11:07:18.423 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+07-Dec-2022 11:07:18.424 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+07-Dec-2022 11:07:18.424 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+07-Dec-2022 11:07:18.424 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+07-Dec-2022 11:07:18.424 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/home/paula/VIS/apache-tomcat-10.0.27/conf/logging.properties
+07-Dec-2022 11:07:18.424 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+07-Dec-2022 11:07:18.424 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+07-Dec-2022 11:07:18.424 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+07-Dec-2022 11:07:18.424 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+07-Dec-2022 11:07:18.424 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+07-Dec-2022 11:07:18.424 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/home/paula/VIS/apache-tomcat-10.0.27
+07-Dec-2022 11:07:18.424 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/home/paula/VIS/apache-tomcat-10.0.27
+07-Dec-2022 11:07:18.424 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/home/paula/VIS/apache-tomcat-10.0.27/temp
+07-Dec-2022 11:07:18.426 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [/usr/java/packages/lib:/usr/lib64:/lib64:/lib:/usr/lib]
+07-Dec-2022 11:07:18.714 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+07-Dec-2022 11:07:18.737 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [505] milliseconds
+07-Dec-2022 11:07:18.771 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+07-Dec-2022 11:07:18.771 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/10.0.27]
+07-Dec-2022 11:07:18.784 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [/home/paula/VIS/apache-tomcat-10.0.27/webapps/demo-1.0-SNAPSHOT.war]
+07-Dec-2022 11:07:19.038 WARNING [main] java.util.ArrayList.forEach Name = UsersDB Property maxActive is not used in DBCP2, use maxTotal instead. maxTotal default value is 8. You have set value of "100" for "maxActive" property, which is being ignored.
+07-Dec-2022 11:07:19.038 WARNING [main] java.util.ArrayList.forEach Name = UsersDB Property maxWait is not used in DBCP2 , use maxWaitMillis instead. maxWaitMillis default value is PT-0.001S. You have set value of "10000" for "maxWait" property, which is being ignored.
+07-Dec-2022 11:07:19.107 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+07-Dec-2022 11:07:19.140 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/home/paula/VIS/apache-tomcat-10.0.27/webapps/demo-1.0-SNAPSHOT.war] has finished in [356] ms
+07-Dec-2022 11:07:19.141 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/paula/VIS/apache-tomcat-10.0.27/webapps/ROOT]
+07-Dec-2022 11:07:19.162 WARNING [main] java.util.ArrayList.forEach Name = UsersDB Property maxActive is not used in DBCP2, use maxTotal instead. maxTotal default value is 8. You have set value of "100" for "maxActive" property, which is being ignored.
+07-Dec-2022 11:07:19.162 WARNING [main] java.util.ArrayList.forEach Name = UsersDB Property maxWait is not used in DBCP2 , use maxWaitMillis instead. maxWaitMillis default value is PT-0.001S. You have set value of "10000" for "maxWait" property, which is being ignored.
+07-Dec-2022 11:07:19.171 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/paula/VIS/apache-tomcat-10.0.27/webapps/ROOT] has finished in [30] ms
+07-Dec-2022 11:07:19.172 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/paula/VIS/apache-tomcat-10.0.27/webapps/manager]
+07-Dec-2022 11:07:19.204 WARNING [main] java.util.ArrayList.forEach Name = UsersDB Property maxActive is not used in DBCP2, use maxTotal instead. maxTotal default value is 8. You have set value of "100" for "maxActive" property, which is being ignored.
+07-Dec-2022 11:07:19.204 WARNING [main] java.util.ArrayList.forEach Name = UsersDB Property maxWait is not used in DBCP2 , use maxWaitMillis instead. maxWaitMillis default value is PT-0.001S. You have set value of "10000" for "maxWait" property, which is being ignored.
+07-Dec-2022 11:07:19.215 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/paula/VIS/apache-tomcat-10.0.27/webapps/manager] has finished in [43] ms
+07-Dec-2022 11:07:19.215 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/paula/VIS/apache-tomcat-10.0.27/webapps/docs]
+07-Dec-2022 11:07:19.235 WARNING [main] java.util.ArrayList.forEach Name = UsersDB Property maxActive is not used in DBCP2, use maxTotal instead. maxTotal default value is 8. You have set value of "100" for "maxActive" property, which is being ignored.
+07-Dec-2022 11:07:19.235 WARNING [main] java.util.ArrayList.forEach Name = UsersDB Property maxWait is not used in DBCP2 , use maxWaitMillis instead. maxWaitMillis default value is PT-0.001S. You have set value of "10000" for "maxWait" property, which is being ignored.
+07-Dec-2022 11:07:19.241 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/paula/VIS/apache-tomcat-10.0.27/webapps/docs] has finished in [25] ms
+07-Dec-2022 11:07:19.241 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/paula/VIS/apache-tomcat-10.0.27/webapps/host-manager]
+07-Dec-2022 11:07:19.259 WARNING [main] java.util.ArrayList.forEach Name = UsersDB Property maxActive is not used in DBCP2, use maxTotal instead. maxTotal default value is 8. You have set value of "100" for "maxActive" property, which is being ignored.
+07-Dec-2022 11:07:19.259 WARNING [main] java.util.ArrayList.forEach Name = UsersDB Property maxWait is not used in DBCP2 , use maxWaitMillis instead. maxWaitMillis default value is PT-0.001S. You have set value of "10000" for "maxWait" property, which is being ignored.
+07-Dec-2022 11:07:19.264 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/paula/VIS/apache-tomcat-10.0.27/webapps/host-manager] has finished in [23] ms
+07-Dec-2022 11:07:19.265 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/paula/VIS/apache-tomcat-10.0.27/webapps/examples]
+07-Dec-2022 11:07:19.335 WARNING [main] java.util.ArrayList.forEach Name = UsersDB Property maxActive is not used in DBCP2, use maxTotal instead. maxTotal default value is 8. You have set value of "100" for "maxActive" property, which is being ignored.
+07-Dec-2022 11:07:19.335 WARNING [main] java.util.ArrayList.forEach Name = UsersDB Property maxWait is not used in DBCP2 , use maxWaitMillis instead. maxWaitMillis default value is PT-0.001S. You have set value of "10000" for "maxWait" property, which is being ignored.
+07-Dec-2022 11:07:19.428 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/paula/VIS/apache-tomcat-10.0.27/webapps/examples] has finished in [162] ms
+07-Dec-2022 11:07:19.431 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+07-Dec-2022 11:07:19.439 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [701] milliseconds
+07-Dec-2022 11:07:19.443 SEVERE [main] org.apache.catalina.core.StandardServer.await Failed to create server shutdown socket on address [localhost] and port [8005] (base port [8005] and offset [0])
+	java.net.BindException: Address already in use
+		at java.base/sun.nio.ch.Net.bind0(Native Method)
+		at java.base/sun.nio.ch.Net.bind(Net.java:555)
+		at java.base/sun.nio.ch.Net.bind(Net.java:544)
+		at java.base/sun.nio.ch.NioSocketImpl.bind(NioSocketImpl.java:640)
+		at java.base/java.net.ServerSocket.bind(ServerSocket.java:392)
+		at java.base/java.net.ServerSocket.<init>(ServerSocket.java:274)
+		at org.apache.catalina.core.StandardServer.await(StandardServer.java:580)
+		at org.apache.catalina.startup.Catalina.await(Catalina.java:887)
+		at org.apache.catalina.startup.Catalina.start(Catalina.java:833)
+		at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+		at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+		at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:345)
+		at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:476)
+07-Dec-2022 11:07:19.444 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+07-Dec-2022 11:07:19.447 INFO [main] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+07-Dec-2022 11:07:19.467 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+07-Dec-2022 11:07:19.471 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+07-Dec-2022 11:07:32.618 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/10.0.27
+07-Dec-2022 11:07:32.620 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Oct 3 2022 14:18:31 UTC
+07-Dec-2022 11:07:32.621 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 10.0.27.0
+07-Dec-2022 11:07:32.621 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Linux
+07-Dec-2022 11:07:32.621 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            6.0.6-76060006-generic
+07-Dec-2022 11:07:32.621 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+07-Dec-2022 11:07:32.621 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /opt/jdk-18
+07-Dec-2022 11:07:32.621 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           18+36-2087
+07-Dec-2022 11:07:32.621 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+07-Dec-2022 11:07:32.621 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /home/paula/VIS/apache-tomcat-10.0.27
+07-Dec-2022 11:07:32.621 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /home/paula/VIS/apache-tomcat-10.0.27
+07-Dec-2022 11:07:32.629 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+07-Dec-2022 11:07:32.629 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+07-Dec-2022 11:07:32.629 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+07-Dec-2022 11:07:32.629 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+07-Dec-2022 11:07:32.629 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+07-Dec-2022 11:07:32.629 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/home/paula/VIS/apache-tomcat-10.0.27/conf/logging.properties
+07-Dec-2022 11:07:32.629 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+07-Dec-2022 11:07:32.629 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+07-Dec-2022 11:07:32.629 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+07-Dec-2022 11:07:32.630 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+07-Dec-2022 11:07:32.630 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+07-Dec-2022 11:07:32.630 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/home/paula/VIS/apache-tomcat-10.0.27
+07-Dec-2022 11:07:32.630 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/home/paula/VIS/apache-tomcat-10.0.27
+07-Dec-2022 11:07:32.630 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/home/paula/VIS/apache-tomcat-10.0.27/temp
+07-Dec-2022 11:07:32.631 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [/usr/java/packages/lib:/usr/lib64:/lib64:/lib:/usr/lib]
+07-Dec-2022 11:07:32.979 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+07-Dec-2022 11:07:33.003 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [559] milliseconds
+07-Dec-2022 11:07:33.041 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+07-Dec-2022 11:07:33.042 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/10.0.27]
+07-Dec-2022 11:07:33.053 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [/home/paula/VIS/apache-tomcat-10.0.27/webapps/demo-1.0-SNAPSHOT.war]
+07-Dec-2022 11:07:33.281 WARNING [main] java.util.ArrayList.forEach Name = UsersDB Property maxActive is not used in DBCP2, use maxTotal instead. maxTotal default value is 8. You have set value of "100" for "maxActive" property, which is being ignored.
+07-Dec-2022 11:07:33.282 WARNING [main] java.util.ArrayList.forEach Name = UsersDB Property maxWait is not used in DBCP2 , use maxWaitMillis instead. maxWaitMillis default value is PT-0.001S. You have set value of "10000" for "maxWait" property, which is being ignored.
+07-Dec-2022 11:07:33.338 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+07-Dec-2022 11:07:33.366 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/home/paula/VIS/apache-tomcat-10.0.27/webapps/demo-1.0-SNAPSHOT.war] has finished in [312] ms
+07-Dec-2022 11:07:33.367 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/paula/VIS/apache-tomcat-10.0.27/webapps/ROOT]
+07-Dec-2022 11:07:33.388 WARNING [main] java.util.ArrayList.forEach Name = UsersDB Property maxActive is not used in DBCP2, use maxTotal instead. maxTotal default value is 8. You have set value of "100" for "maxActive" property, which is being ignored.
+07-Dec-2022 11:07:33.388 WARNING [main] java.util.ArrayList.forEach Name = UsersDB Property maxWait is not used in DBCP2 , use maxWaitMillis instead. maxWaitMillis default value is PT-0.001S. You have set value of "10000" for "maxWait" property, which is being ignored.
+07-Dec-2022 11:07:33.394 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/paula/VIS/apache-tomcat-10.0.27/webapps/ROOT] has finished in [26] ms
+07-Dec-2022 11:07:33.394 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/paula/VIS/apache-tomcat-10.0.27/webapps/manager]
+07-Dec-2022 11:07:33.421 WARNING [main] java.util.ArrayList.forEach Name = UsersDB Property maxActive is not used in DBCP2, use maxTotal instead. maxTotal default value is 8. You have set value of "100" for "maxActive" property, which is being ignored.
+07-Dec-2022 11:07:33.421 WARNING [main] java.util.ArrayList.forEach Name = UsersDB Property maxWait is not used in DBCP2 , use maxWaitMillis instead. maxWaitMillis default value is PT-0.001S. You have set value of "10000" for "maxWait" property, which is being ignored.
+07-Dec-2022 11:07:33.429 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/paula/VIS/apache-tomcat-10.0.27/webapps/manager] has finished in [35] ms
+07-Dec-2022 11:07:33.429 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/paula/VIS/apache-tomcat-10.0.27/webapps/docs]
+07-Dec-2022 11:07:33.449 WARNING [main] java.util.ArrayList.forEach Name = UsersDB Property maxActive is not used in DBCP2, use maxTotal instead. maxTotal default value is 8. You have set value of "100" for "maxActive" property, which is being ignored.
+07-Dec-2022 11:07:33.450 WARNING [main] java.util.ArrayList.forEach Name = UsersDB Property maxWait is not used in DBCP2 , use maxWaitMillis instead. maxWaitMillis default value is PT-0.001S. You have set value of "10000" for "maxWait" property, which is being ignored.
+07-Dec-2022 11:07:33.455 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/paula/VIS/apache-tomcat-10.0.27/webapps/docs] has finished in [25] ms
+07-Dec-2022 11:07:33.455 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/paula/VIS/apache-tomcat-10.0.27/webapps/host-manager]
+07-Dec-2022 11:07:33.472 WARNING [main] java.util.ArrayList.forEach Name = UsersDB Property maxActive is not used in DBCP2, use maxTotal instead. maxTotal default value is 8. You have set value of "100" for "maxActive" property, which is being ignored.
+07-Dec-2022 11:07:33.472 WARNING [main] java.util.ArrayList.forEach Name = UsersDB Property maxWait is not used in DBCP2 , use maxWaitMillis instead. maxWaitMillis default value is PT-0.001S. You have set value of "10000" for "maxWait" property, which is being ignored.
+07-Dec-2022 11:07:33.480 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/paula/VIS/apache-tomcat-10.0.27/webapps/host-manager] has finished in [25] ms
+07-Dec-2022 11:07:33.480 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/paula/VIS/apache-tomcat-10.0.27/webapps/examples]
+07-Dec-2022 11:07:33.559 WARNING [main] java.util.ArrayList.forEach Name = UsersDB Property maxActive is not used in DBCP2, use maxTotal instead. maxTotal default value is 8. You have set value of "100" for "maxActive" property, which is being ignored.
+07-Dec-2022 11:07:33.560 WARNING [main] java.util.ArrayList.forEach Name = UsersDB Property maxWait is not used in DBCP2 , use maxWaitMillis instead. maxWaitMillis default value is PT-0.001S. You have set value of "10000" for "maxWait" property, which is being ignored.
+07-Dec-2022 11:07:33.663 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/paula/VIS/apache-tomcat-10.0.27/webapps/examples] has finished in [183] ms
+07-Dec-2022 11:07:33.668 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+07-Dec-2022 11:07:33.679 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [674] milliseconds
+07-Dec-2022 11:07:33.685 SEVERE [main] org.apache.catalina.core.StandardServer.await Failed to create server shutdown socket on address [localhost] and port [8005] (base port [8005] and offset [0])
+	java.net.BindException: Address already in use
+		at java.base/sun.nio.ch.Net.bind0(Native Method)
+		at java.base/sun.nio.ch.Net.bind(Net.java:555)
+		at java.base/sun.nio.ch.Net.bind(Net.java:544)
+		at java.base/sun.nio.ch.NioSocketImpl.bind(NioSocketImpl.java:640)
+		at java.base/java.net.ServerSocket.bind(ServerSocket.java:392)
+		at java.base/java.net.ServerSocket.<init>(ServerSocket.java:274)
+		at org.apache.catalina.core.StandardServer.await(StandardServer.java:580)
+		at org.apache.catalina.startup.Catalina.await(Catalina.java:887)
+		at org.apache.catalina.startup.Catalina.start(Catalina.java:833)
+		at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+		at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+		at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:345)
+		at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:476)
+07-Dec-2022 11:07:33.687 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+07-Dec-2022 11:07:33.690 INFO [main] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+07-Dec-2022 11:07:33.717 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+07-Dec-2022 11:07:33.724 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+07-Dec-2022 11:08:16.862 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/10.0.27
+07-Dec-2022 11:08:16.865 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Oct 3 2022 14:18:31 UTC
+07-Dec-2022 11:08:16.865 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 10.0.27.0
+07-Dec-2022 11:08:16.865 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Linux
+07-Dec-2022 11:08:16.865 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            6.0.6-76060006-generic
+07-Dec-2022 11:08:16.865 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+07-Dec-2022 11:08:16.866 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /opt/jdk-18
+07-Dec-2022 11:08:16.866 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           18+36-2087
+07-Dec-2022 11:08:16.866 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+07-Dec-2022 11:08:16.866 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /home/paula/VIS/apache-tomcat-10.0.27
+07-Dec-2022 11:08:16.866 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /home/paula/VIS/apache-tomcat-10.0.27
+07-Dec-2022 11:08:16.873 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+07-Dec-2022 11:08:16.873 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+07-Dec-2022 11:08:16.873 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+07-Dec-2022 11:08:16.873 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+07-Dec-2022 11:08:16.873 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+07-Dec-2022 11:08:16.874 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/home/paula/VIS/apache-tomcat-10.0.27/conf/logging.properties
+07-Dec-2022 11:08:16.874 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+07-Dec-2022 11:08:16.874 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+07-Dec-2022 11:08:16.874 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+07-Dec-2022 11:08:16.874 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+07-Dec-2022 11:08:16.874 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+07-Dec-2022 11:08:16.874 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/home/paula/VIS/apache-tomcat-10.0.27
+07-Dec-2022 11:08:16.874 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/home/paula/VIS/apache-tomcat-10.0.27
+07-Dec-2022 11:08:16.874 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/home/paula/VIS/apache-tomcat-10.0.27/temp
+07-Dec-2022 11:08:16.877 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [/usr/java/packages/lib:/usr/lib64:/lib64:/lib:/usr/lib]
+07-Dec-2022 11:08:17.127 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+07-Dec-2022 11:08:17.144 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [420] milliseconds
+07-Dec-2022 11:08:17.172 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+07-Dec-2022 11:08:17.172 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/10.0.27]
+07-Dec-2022 11:08:17.184 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [/home/paula/VIS/apache-tomcat-10.0.27/webapps/demo-1.0-SNAPSHOT.war]
+07-Dec-2022 11:08:17.373 WARNING [main] java.util.ArrayList.forEach Name = UsersDB Property maxActive is not used in DBCP2, use maxTotal instead. maxTotal default value is 8. You have set value of "100" for "maxActive" property, which is being ignored.
+07-Dec-2022 11:08:17.374 WARNING [main] java.util.ArrayList.forEach Name = UsersDB Property maxWait is not used in DBCP2 , use maxWaitMillis instead. maxWaitMillis default value is PT-0.001S. You have set value of "10000" for "maxWait" property, which is being ignored.
+07-Dec-2022 11:08:17.422 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+07-Dec-2022 11:08:17.446 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/home/paula/VIS/apache-tomcat-10.0.27/webapps/demo-1.0-SNAPSHOT.war] has finished in [263] ms
+07-Dec-2022 11:08:17.446 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/paula/VIS/apache-tomcat-10.0.27/webapps/ROOT]
+07-Dec-2022 11:08:17.461 WARNING [main] java.util.ArrayList.forEach Name = UsersDB Property maxActive is not used in DBCP2, use maxTotal instead. maxTotal default value is 8. You have set value of "100" for "maxActive" property, which is being ignored.
+07-Dec-2022 11:08:17.462 WARNING [main] java.util.ArrayList.forEach Name = UsersDB Property maxWait is not used in DBCP2 , use maxWaitMillis instead. maxWaitMillis default value is PT-0.001S. You have set value of "10000" for "maxWait" property, which is being ignored.
+07-Dec-2022 11:08:17.466 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/paula/VIS/apache-tomcat-10.0.27/webapps/ROOT] has finished in [20] ms
+07-Dec-2022 11:08:17.466 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/paula/VIS/apache-tomcat-10.0.27/webapps/manager]
+07-Dec-2022 11:08:17.492 WARNING [main] java.util.ArrayList.forEach Name = UsersDB Property maxActive is not used in DBCP2, use maxTotal instead. maxTotal default value is 8. You have set value of "100" for "maxActive" property, which is being ignored.
+07-Dec-2022 11:08:17.493 WARNING [main] java.util.ArrayList.forEach Name = UsersDB Property maxWait is not used in DBCP2 , use maxWaitMillis instead. maxWaitMillis default value is PT-0.001S. You have set value of "10000" for "maxWait" property, which is being ignored.
+07-Dec-2022 11:08:17.503 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/paula/VIS/apache-tomcat-10.0.27/webapps/manager] has finished in [37] ms
+07-Dec-2022 11:08:17.503 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/paula/VIS/apache-tomcat-10.0.27/webapps/docs]
+07-Dec-2022 11:08:17.523 WARNING [main] java.util.ArrayList.forEach Name = UsersDB Property maxActive is not used in DBCP2, use maxTotal instead. maxTotal default value is 8. You have set value of "100" for "maxActive" property, which is being ignored.
+07-Dec-2022 11:08:17.524 WARNING [main] java.util.ArrayList.forEach Name = UsersDB Property maxWait is not used in DBCP2 , use maxWaitMillis instead. maxWaitMillis default value is PT-0.001S. You have set value of "10000" for "maxWait" property, which is being ignored.
+07-Dec-2022 11:08:17.530 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/paula/VIS/apache-tomcat-10.0.27/webapps/docs] has finished in [27] ms
+07-Dec-2022 11:08:17.531 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/paula/VIS/apache-tomcat-10.0.27/webapps/host-manager]
+07-Dec-2022 11:08:17.547 WARNING [main] java.util.ArrayList.forEach Name = UsersDB Property maxActive is not used in DBCP2, use maxTotal instead. maxTotal default value is 8. You have set value of "100" for "maxActive" property, which is being ignored.
+07-Dec-2022 11:08:17.548 WARNING [main] java.util.ArrayList.forEach Name = UsersDB Property maxWait is not used in DBCP2 , use maxWaitMillis instead. maxWaitMillis default value is PT-0.001S. You have set value of "10000" for "maxWait" property, which is being ignored.
+07-Dec-2022 11:08:17.553 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/paula/VIS/apache-tomcat-10.0.27/webapps/host-manager] has finished in [23] ms
+07-Dec-2022 11:08:17.554 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/paula/VIS/apache-tomcat-10.0.27/webapps/examples]
+07-Dec-2022 11:08:17.627 WARNING [main] java.util.ArrayList.forEach Name = UsersDB Property maxActive is not used in DBCP2, use maxTotal instead. maxTotal default value is 8. You have set value of "100" for "maxActive" property, which is being ignored.
+07-Dec-2022 11:08:17.627 WARNING [main] java.util.ArrayList.forEach Name = UsersDB Property maxWait is not used in DBCP2 , use maxWaitMillis instead. maxWaitMillis default value is PT-0.001S. You have set value of "10000" for "maxWait" property, which is being ignored.
+07-Dec-2022 11:08:17.721 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/paula/VIS/apache-tomcat-10.0.27/webapps/examples] has finished in [166] ms
+07-Dec-2022 11:08:17.724 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+07-Dec-2022 11:08:17.733 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [588] milliseconds
+07-Dec-2022 11:08:17.737 SEVERE [main] org.apache.catalina.core.StandardServer.await Failed to create server shutdown socket on address [localhost] and port [8005] (base port [8005] and offset [0])
+	java.net.BindException: Address already in use
+		at java.base/sun.nio.ch.Net.bind0(Native Method)
+		at java.base/sun.nio.ch.Net.bind(Net.java:555)
+		at java.base/sun.nio.ch.Net.bind(Net.java:544)
+		at java.base/sun.nio.ch.NioSocketImpl.bind(NioSocketImpl.java:640)
+		at java.base/java.net.ServerSocket.bind(ServerSocket.java:392)
+		at java.base/java.net.ServerSocket.<init>(ServerSocket.java:274)
+		at org.apache.catalina.core.StandardServer.await(StandardServer.java:580)
+		at org.apache.catalina.startup.Catalina.await(Catalina.java:887)
+		at org.apache.catalina.startup.Catalina.start(Catalina.java:833)
+		at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+		at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+		at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:345)
+		at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:476)
+07-Dec-2022 11:08:17.738 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+07-Dec-2022 11:08:17.741 INFO [main] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+07-Dec-2022 11:08:17.760 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+07-Dec-2022 11:08:17.764 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+07-Dec-2022 11:10:16.019 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/10.0.27
+07-Dec-2022 11:10:16.022 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Oct 3 2022 14:18:31 UTC
+07-Dec-2022 11:10:16.022 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 10.0.27.0
+07-Dec-2022 11:10:16.022 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Linux
+07-Dec-2022 11:10:16.022 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            6.0.6-76060006-generic
+07-Dec-2022 11:10:16.022 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+07-Dec-2022 11:10:16.022 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /opt/jdk-18
+07-Dec-2022 11:10:16.022 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           18+36-2087
+07-Dec-2022 11:10:16.022 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+07-Dec-2022 11:10:16.023 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /home/paula/VIS/apache-tomcat-10.0.27
+07-Dec-2022 11:10:16.023 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /home/paula/VIS/apache-tomcat-10.0.27
+07-Dec-2022 11:10:16.030 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+07-Dec-2022 11:10:16.030 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+07-Dec-2022 11:10:16.030 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+07-Dec-2022 11:10:16.030 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+07-Dec-2022 11:10:16.031 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+07-Dec-2022 11:10:16.031 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/home/paula/VIS/apache-tomcat-10.0.27/conf/logging.properties
+07-Dec-2022 11:10:16.031 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+07-Dec-2022 11:10:16.031 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+07-Dec-2022 11:10:16.031 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+07-Dec-2022 11:10:16.031 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+07-Dec-2022 11:10:16.031 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+07-Dec-2022 11:10:16.031 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/home/paula/VIS/apache-tomcat-10.0.27
+07-Dec-2022 11:10:16.031 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/home/paula/VIS/apache-tomcat-10.0.27
+07-Dec-2022 11:10:16.032 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/home/paula/VIS/apache-tomcat-10.0.27/temp
+07-Dec-2022 11:10:16.033 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [/usr/java/packages/lib:/usr/lib64:/lib64:/lib:/usr/lib]
+07-Dec-2022 11:10:16.294 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+07-Dec-2022 11:10:16.303 SEVERE [main] org.apache.catalina.util.LifecycleBase.handleSubClassException Failed to initialize component [Connector[HTTP/1.1-8080]]
+	org.apache.catalina.LifecycleException: Protocol handler initialization failed
+		at org.apache.catalina.connector.Connector.initInternal(Connector.java:1055)
+		at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+		at org.apache.catalina.core.StandardService.initInternal(StandardService.java:556)
+		at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+		at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:1045)
+		at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+		at org.apache.catalina.startup.Catalina.load(Catalina.java:747)
+		at org.apache.catalina.startup.Catalina.load(Catalina.java:769)
+		at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+		at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+		at org.apache.catalina.startup.Bootstrap.load(Bootstrap.java:305)
+		at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:475)
+	Caused by: java.net.BindException: Address already in use
+		at java.base/sun.nio.ch.Net.bind0(Native Method)
+		at java.base/sun.nio.ch.Net.bind(Net.java:555)
+		at java.base/sun.nio.ch.ServerSocketChannelImpl.netBind(ServerSocketChannelImpl.java:337)
+		at java.base/sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:294)
+		at org.apache.tomcat.util.net.NioEndpoint.initServerSocket(NioEndpoint.java:246)
+		at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:201)
+		at org.apache.tomcat.util.net.AbstractEndpoint.bindWithCleanup(AbstractEndpoint.java:1192)
+		at org.apache.tomcat.util.net.AbstractEndpoint.init(AbstractEndpoint.java:1205)
+		at org.apache.coyote.AbstractProtocol.init(AbstractProtocol.java:583)
+		at org.apache.coyote.http11.AbstractHttp11Protocol.init(AbstractHttp11Protocol.java:79)
+		at org.apache.catalina.connector.Connector.initInternal(Connector.java:1052)
+		... 11 more
+07-Dec-2022 11:10:16.304 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [432] milliseconds
+07-Dec-2022 11:10:16.332 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+07-Dec-2022 11:10:16.332 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/10.0.27]
+07-Dec-2022 11:10:16.344 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [/home/paula/VIS/apache-tomcat-10.0.27/webapps/demo-1.0-SNAPSHOT.war]
+07-Dec-2022 11:10:16.534 WARNING [main] java.util.ArrayList.forEach Name = UsersDB Property maxActive is not used in DBCP2, use maxTotal instead. maxTotal default value is 8. You have set value of "100" for "maxActive" property, which is being ignored.
+07-Dec-2022 11:10:16.534 WARNING [main] java.util.ArrayList.forEach Name = UsersDB Property maxWait is not used in DBCP2 , use maxWaitMillis instead. maxWaitMillis default value is PT-0.001S. You have set value of "10000" for "maxWait" property, which is being ignored.
+07-Dec-2022 11:10:16.578 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+07-Dec-2022 11:10:16.602 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/home/paula/VIS/apache-tomcat-10.0.27/webapps/demo-1.0-SNAPSHOT.war] has finished in [258] ms
+07-Dec-2022 11:10:16.602 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/paula/VIS/apache-tomcat-10.0.27/webapps/ROOT]
+07-Dec-2022 11:10:16.615 WARNING [main] java.util.ArrayList.forEach Name = UsersDB Property maxActive is not used in DBCP2, use maxTotal instead. maxTotal default value is 8. You have set value of "100" for "maxActive" property, which is being ignored.
+07-Dec-2022 11:10:16.615 WARNING [main] java.util.ArrayList.forEach Name = UsersDB Property maxWait is not used in DBCP2 , use maxWaitMillis instead. maxWaitMillis default value is PT-0.001S. You have set value of "10000" for "maxWait" property, which is being ignored.
+07-Dec-2022 11:10:16.619 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/paula/VIS/apache-tomcat-10.0.27/webapps/ROOT] has finished in [17] ms
+07-Dec-2022 11:10:16.620 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/paula/VIS/apache-tomcat-10.0.27/webapps/manager]
+07-Dec-2022 11:10:16.640 WARNING [main] java.util.ArrayList.forEach Name = UsersDB Property maxActive is not used in DBCP2, use maxTotal instead. maxTotal default value is 8. You have set value of "100" for "maxActive" property, which is being ignored.
+07-Dec-2022 11:10:16.640 WARNING [main] java.util.ArrayList.forEach Name = UsersDB Property maxWait is not used in DBCP2 , use maxWaitMillis instead. maxWaitMillis default value is PT-0.001S. You have set value of "10000" for "maxWait" property, which is being ignored.
+07-Dec-2022 11:10:16.647 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/paula/VIS/apache-tomcat-10.0.27/webapps/manager] has finished in [27] ms
+07-Dec-2022 11:10:16.647 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/paula/VIS/apache-tomcat-10.0.27/webapps/docs]
+07-Dec-2022 11:10:16.663 WARNING [main] java.util.ArrayList.forEach Name = UsersDB Property maxActive is not used in DBCP2, use maxTotal instead. maxTotal default value is 8. You have set value of "100" for "maxActive" property, which is being ignored.
+07-Dec-2022 11:10:16.663 WARNING [main] java.util.ArrayList.forEach Name = UsersDB Property maxWait is not used in DBCP2 , use maxWaitMillis instead. maxWaitMillis default value is PT-0.001S. You have set value of "10000" for "maxWait" property, which is being ignored.
+07-Dec-2022 11:10:16.667 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/paula/VIS/apache-tomcat-10.0.27/webapps/docs] has finished in [20] ms
+07-Dec-2022 11:10:16.667 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/paula/VIS/apache-tomcat-10.0.27/webapps/host-manager]
+07-Dec-2022 11:10:16.679 WARNING [main] java.util.ArrayList.forEach Name = UsersDB Property maxActive is not used in DBCP2, use maxTotal instead. maxTotal default value is 8. You have set value of "100" for "maxActive" property, which is being ignored.
+07-Dec-2022 11:10:16.679 WARNING [main] java.util.ArrayList.forEach Name = UsersDB Property maxWait is not used in DBCP2 , use maxWaitMillis instead. maxWaitMillis default value is PT-0.001S. You have set value of "10000" for "maxWait" property, which is being ignored.
+07-Dec-2022 11:10:16.683 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/paula/VIS/apache-tomcat-10.0.27/webapps/host-manager] has finished in [16] ms
+07-Dec-2022 11:10:16.683 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/paula/VIS/apache-tomcat-10.0.27/webapps/examples]
+07-Dec-2022 11:10:16.733 WARNING [main] java.util.ArrayList.forEach Name = UsersDB Property maxActive is not used in DBCP2, use maxTotal instead. maxTotal default value is 8. You have set value of "100" for "maxActive" property, which is being ignored.
+07-Dec-2022 11:10:16.734 WARNING [main] java.util.ArrayList.forEach Name = UsersDB Property maxWait is not used in DBCP2 , use maxWaitMillis instead. maxWaitMillis default value is PT-0.001S. You have set value of "10000" for "maxWait" property, which is being ignored.
+07-Dec-2022 11:10:16.804 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/paula/VIS/apache-tomcat-10.0.27/webapps/examples] has finished in [120] ms
+07-Dec-2022 11:10:16.806 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [501] milliseconds
+07-Dec-2022 11:10:20.815 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/10.0.27
+07-Dec-2022 11:10:20.819 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Oct 3 2022 14:18:31 UTC
+07-Dec-2022 11:10:20.819 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 10.0.27.0
+07-Dec-2022 11:10:20.820 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Linux
+07-Dec-2022 11:10:20.820 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            6.0.6-76060006-generic
+07-Dec-2022 11:10:20.820 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+07-Dec-2022 11:10:20.820 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /opt/jdk-18
+07-Dec-2022 11:10:20.820 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           18+36-2087
+07-Dec-2022 11:10:20.820 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+07-Dec-2022 11:10:20.820 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /home/paula/VIS/apache-tomcat-10.0.27
+07-Dec-2022 11:10:20.820 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /home/paula/VIS/apache-tomcat-10.0.27
+07-Dec-2022 11:10:20.826 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+07-Dec-2022 11:10:20.826 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+07-Dec-2022 11:10:20.826 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+07-Dec-2022 11:10:20.826 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+07-Dec-2022 11:10:20.826 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+07-Dec-2022 11:10:20.827 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/home/paula/VIS/apache-tomcat-10.0.27/conf/logging.properties
+07-Dec-2022 11:10:20.827 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+07-Dec-2022 11:10:20.827 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+07-Dec-2022 11:10:20.827 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+07-Dec-2022 11:10:20.827 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+07-Dec-2022 11:10:20.827 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+07-Dec-2022 11:10:20.827 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/home/paula/VIS/apache-tomcat-10.0.27
+07-Dec-2022 11:10:20.827 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/home/paula/VIS/apache-tomcat-10.0.27
+07-Dec-2022 11:10:20.827 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/home/paula/VIS/apache-tomcat-10.0.27/temp
+07-Dec-2022 11:10:20.829 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [/usr/java/packages/lib:/usr/lib64:/lib64:/lib:/usr/lib]
+07-Dec-2022 11:10:21.073 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+07-Dec-2022 11:10:21.083 SEVERE [main] org.apache.catalina.util.LifecycleBase.handleSubClassException Failed to initialize component [Connector[HTTP/1.1-8080]]
+	org.apache.catalina.LifecycleException: Protocol handler initialization failed
+		at org.apache.catalina.connector.Connector.initInternal(Connector.java:1055)
+		at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+		at org.apache.catalina.core.StandardService.initInternal(StandardService.java:556)
+		at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+		at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:1045)
+		at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+		at org.apache.catalina.startup.Catalina.load(Catalina.java:747)
+		at org.apache.catalina.startup.Catalina.load(Catalina.java:769)
+		at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+		at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+		at org.apache.catalina.startup.Bootstrap.load(Bootstrap.java:305)
+		at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:475)
+	Caused by: java.net.BindException: Address already in use
+		at java.base/sun.nio.ch.Net.bind0(Native Method)
+		at java.base/sun.nio.ch.Net.bind(Net.java:555)
+		at java.base/sun.nio.ch.ServerSocketChannelImpl.netBind(ServerSocketChannelImpl.java:337)
+		at java.base/sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:294)
+		at org.apache.tomcat.util.net.NioEndpoint.initServerSocket(NioEndpoint.java:246)
+		at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:201)
+		at org.apache.tomcat.util.net.AbstractEndpoint.bindWithCleanup(AbstractEndpoint.java:1192)
+		at org.apache.tomcat.util.net.AbstractEndpoint.init(AbstractEndpoint.java:1205)
+		at org.apache.coyote.AbstractProtocol.init(AbstractProtocol.java:583)
+		at org.apache.coyote.http11.AbstractHttp11Protocol.init(AbstractHttp11Protocol.java:79)
+		at org.apache.catalina.connector.Connector.initInternal(Connector.java:1052)
+		... 11 more
+07-Dec-2022 11:10:21.084 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [449] milliseconds
+07-Dec-2022 11:10:21.122 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+07-Dec-2022 11:10:21.122 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/10.0.27]
+07-Dec-2022 11:10:21.135 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [/home/paula/VIS/apache-tomcat-10.0.27/webapps/demo-1.0-SNAPSHOT.war]
+07-Dec-2022 11:10:21.386 WARNING [main] java.util.ArrayList.forEach Name = UsersDB Property maxActive is not used in DBCP2, use maxTotal instead. maxTotal default value is 8. You have set value of "100" for "maxActive" property, which is being ignored.
+07-Dec-2022 11:10:21.386 WARNING [main] java.util.ArrayList.forEach Name = UsersDB Property maxWait is not used in DBCP2 , use maxWaitMillis instead. maxWaitMillis default value is PT-0.001S. You have set value of "10000" for "maxWait" property, which is being ignored.
+07-Dec-2022 11:10:21.438 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+07-Dec-2022 11:10:21.463 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/home/paula/VIS/apache-tomcat-10.0.27/webapps/demo-1.0-SNAPSHOT.war] has finished in [328] ms
+07-Dec-2022 11:10:21.464 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/paula/VIS/apache-tomcat-10.0.27/webapps/ROOT]
+07-Dec-2022 11:10:21.477 WARNING [main] java.util.ArrayList.forEach Name = UsersDB Property maxActive is not used in DBCP2, use maxTotal instead. maxTotal default value is 8. You have set value of "100" for "maxActive" property, which is being ignored.
+07-Dec-2022 11:10:21.478 WARNING [main] java.util.ArrayList.forEach Name = UsersDB Property maxWait is not used in DBCP2 , use maxWaitMillis instead. maxWaitMillis default value is PT-0.001S. You have set value of "10000" for "maxWait" property, which is being ignored.
+07-Dec-2022 11:10:21.483 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/paula/VIS/apache-tomcat-10.0.27/webapps/ROOT] has finished in [19] ms
+07-Dec-2022 11:10:21.483 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/paula/VIS/apache-tomcat-10.0.27/webapps/manager]
+07-Dec-2022 11:10:21.507 WARNING [main] java.util.ArrayList.forEach Name = UsersDB Property maxActive is not used in DBCP2, use maxTotal instead. maxTotal default value is 8. You have set value of "100" for "maxActive" property, which is being ignored.
+07-Dec-2022 11:10:21.507 WARNING [main] java.util.ArrayList.forEach Name = UsersDB Property maxWait is not used in DBCP2 , use maxWaitMillis instead. maxWaitMillis default value is PT-0.001S. You have set value of "10000" for "maxWait" property, which is being ignored.
+07-Dec-2022 11:10:21.516 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/paula/VIS/apache-tomcat-10.0.27/webapps/manager] has finished in [33] ms
+07-Dec-2022 11:10:21.516 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/paula/VIS/apache-tomcat-10.0.27/webapps/docs]
+07-Dec-2022 11:10:21.534 WARNING [main] java.util.ArrayList.forEach Name = UsersDB Property maxActive is not used in DBCP2, use maxTotal instead. maxTotal default value is 8. You have set value of "100" for "maxActive" property, which is being ignored.
+07-Dec-2022 11:10:21.534 WARNING [main] java.util.ArrayList.forEach Name = UsersDB Property maxWait is not used in DBCP2 , use maxWaitMillis instead. maxWaitMillis default value is PT-0.001S. You have set value of "10000" for "maxWait" property, which is being ignored.
+07-Dec-2022 11:10:21.538 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/paula/VIS/apache-tomcat-10.0.27/webapps/docs] has finished in [22] ms
+07-Dec-2022 11:10:21.538 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/paula/VIS/apache-tomcat-10.0.27/webapps/host-manager]
+07-Dec-2022 11:10:21.552 WARNING [main] java.util.ArrayList.forEach Name = UsersDB Property maxActive is not used in DBCP2, use maxTotal instead. maxTotal default value is 8. You have set value of "100" for "maxActive" property, which is being ignored.
+07-Dec-2022 11:10:21.552 WARNING [main] java.util.ArrayList.forEach Name = UsersDB Property maxWait is not used in DBCP2 , use maxWaitMillis instead. maxWaitMillis default value is PT-0.001S. You have set value of "10000" for "maxWait" property, which is being ignored.
+07-Dec-2022 11:10:21.557 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/paula/VIS/apache-tomcat-10.0.27/webapps/host-manager] has finished in [18] ms
+07-Dec-2022 11:10:21.557 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/paula/VIS/apache-tomcat-10.0.27/webapps/examples]
+07-Dec-2022 11:10:21.611 WARNING [main] java.util.ArrayList.forEach Name = UsersDB Property maxActive is not used in DBCP2, use maxTotal instead. maxTotal default value is 8. You have set value of "100" for "maxActive" property, which is being ignored.
+07-Dec-2022 11:10:21.612 WARNING [main] java.util.ArrayList.forEach Name = UsersDB Property maxWait is not used in DBCP2 , use maxWaitMillis instead. maxWaitMillis default value is PT-0.001S. You have set value of "10000" for "maxWait" property, which is being ignored.
+07-Dec-2022 11:10:21.678 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/paula/VIS/apache-tomcat-10.0.27/webapps/examples] has finished in [121] ms
+07-Dec-2022 11:10:21.681 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [595] milliseconds
+07-Dec-2022 11:10:21.687 SEVERE [main] org.apache.catalina.core.StandardServer.await Failed to create server shutdown socket on address [localhost] and port [8005] (base port [8005] and offset [0])
+	java.net.BindException: Address already in use
+		at java.base/sun.nio.ch.Net.bind0(Native Method)
+		at java.base/sun.nio.ch.Net.bind(Net.java:555)
+		at java.base/sun.nio.ch.Net.bind(Net.java:544)
+		at java.base/sun.nio.ch.NioSocketImpl.bind(NioSocketImpl.java:640)
+		at java.base/java.net.ServerSocket.bind(ServerSocket.java:392)
+		at java.base/java.net.ServerSocket.<init>(ServerSocket.java:274)
+		at org.apache.catalina.core.StandardServer.await(StandardServer.java:580)
+		at org.apache.catalina.startup.Catalina.await(Catalina.java:887)
+		at org.apache.catalina.startup.Catalina.start(Catalina.java:833)
+		at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+		at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+		at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:345)
+		at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:476)
+07-Dec-2022 11:10:21.687 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+07-Dec-2022 11:10:21.687 INFO [main] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+07-Dec-2022 11:10:21.705 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+07-Dec-2022 11:10:21.707 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+07-Dec-2022 11:11:20.392 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/10.0.27
+07-Dec-2022 11:11:20.395 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Oct 3 2022 14:18:31 UTC
+07-Dec-2022 11:11:20.395 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 10.0.27.0
+07-Dec-2022 11:11:20.395 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Linux
+07-Dec-2022 11:11:20.395 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            6.0.6-76060006-generic
+07-Dec-2022 11:11:20.395 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+07-Dec-2022 11:11:20.395 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /opt/jdk-18
+07-Dec-2022 11:11:20.395 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           18+36-2087
+07-Dec-2022 11:11:20.395 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+07-Dec-2022 11:11:20.396 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /home/paula/VIS/apache-tomcat-10.0.27
+07-Dec-2022 11:11:20.396 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /home/paula/VIS/apache-tomcat-10.0.27
+07-Dec-2022 11:11:20.401 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+07-Dec-2022 11:11:20.401 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+07-Dec-2022 11:11:20.401 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+07-Dec-2022 11:11:20.401 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+07-Dec-2022 11:11:20.401 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+07-Dec-2022 11:11:20.401 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/home/paula/VIS/apache-tomcat-10.0.27/conf/logging.properties
+07-Dec-2022 11:11:20.401 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+07-Dec-2022 11:11:20.402 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+07-Dec-2022 11:11:20.402 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+07-Dec-2022 11:11:20.402 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+07-Dec-2022 11:11:20.402 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+07-Dec-2022 11:11:20.402 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/home/paula/VIS/apache-tomcat-10.0.27
+07-Dec-2022 11:11:20.402 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/home/paula/VIS/apache-tomcat-10.0.27
+07-Dec-2022 11:11:20.402 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/home/paula/VIS/apache-tomcat-10.0.27/temp
+07-Dec-2022 11:11:20.403 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [/usr/java/packages/lib:/usr/lib64:/lib64:/lib:/usr/lib]
+07-Dec-2022 11:11:20.629 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+07-Dec-2022 11:11:20.639 SEVERE [main] org.apache.catalina.util.LifecycleBase.handleSubClassException Failed to initialize component [Connector[HTTP/1.1-8080]]
+	org.apache.catalina.LifecycleException: Protocol handler initialization failed
+		at org.apache.catalina.connector.Connector.initInternal(Connector.java:1055)
+		at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+		at org.apache.catalina.core.StandardService.initInternal(StandardService.java:556)
+		at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+		at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:1045)
+		at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+		at org.apache.catalina.startup.Catalina.load(Catalina.java:747)
+		at org.apache.catalina.startup.Catalina.load(Catalina.java:769)
+		at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+		at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+		at org.apache.catalina.startup.Bootstrap.load(Bootstrap.java:305)
+		at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:475)
+	Caused by: java.net.BindException: Address already in use
+		at java.base/sun.nio.ch.Net.bind0(Native Method)
+		at java.base/sun.nio.ch.Net.bind(Net.java:555)
+		at java.base/sun.nio.ch.ServerSocketChannelImpl.netBind(ServerSocketChannelImpl.java:337)
+		at java.base/sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:294)
+		at org.apache.tomcat.util.net.NioEndpoint.initServerSocket(NioEndpoint.java:246)
+		at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:201)
+		at org.apache.tomcat.util.net.AbstractEndpoint.bindWithCleanup(AbstractEndpoint.java:1192)
+		at org.apache.tomcat.util.net.AbstractEndpoint.init(AbstractEndpoint.java:1205)
+		at org.apache.coyote.AbstractProtocol.init(AbstractProtocol.java:583)
+		at org.apache.coyote.http11.AbstractHttp11Protocol.init(AbstractHttp11Protocol.java:79)
+		at org.apache.catalina.connector.Connector.initInternal(Connector.java:1052)
+		... 11 more
+07-Dec-2022 11:11:20.640 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [375] milliseconds
+07-Dec-2022 11:11:20.667 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+07-Dec-2022 11:11:20.667 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/10.0.27]
+07-Dec-2022 11:11:20.677 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [/home/paula/VIS/apache-tomcat-10.0.27/webapps/demo-1.0-SNAPSHOT.war]
+07-Dec-2022 11:11:20.839 WARNING [main] java.util.ArrayList.forEach Name = UsersDB Property maxActive is not used in DBCP2, use maxTotal instead. maxTotal default value is 8. You have set value of "100" for "maxActive" property, which is being ignored.
+07-Dec-2022 11:11:20.839 WARNING [main] java.util.ArrayList.forEach Name = UsersDB Property maxWait is not used in DBCP2 , use maxWaitMillis instead. maxWaitMillis default value is PT-0.001S. You have set value of "10000" for "maxWait" property, which is being ignored.
+07-Dec-2022 11:11:20.882 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+07-Dec-2022 11:11:20.904 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/home/paula/VIS/apache-tomcat-10.0.27/webapps/demo-1.0-SNAPSHOT.war] has finished in [226] ms
+07-Dec-2022 11:11:20.904 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/paula/VIS/apache-tomcat-10.0.27/webapps/ROOT]
+07-Dec-2022 11:11:20.915 WARNING [main] java.util.ArrayList.forEach Name = UsersDB Property maxActive is not used in DBCP2, use maxTotal instead. maxTotal default value is 8. You have set value of "100" for "maxActive" property, which is being ignored.
+07-Dec-2022 11:11:20.915 WARNING [main] java.util.ArrayList.forEach Name = UsersDB Property maxWait is not used in DBCP2 , use maxWaitMillis instead. maxWaitMillis default value is PT-0.001S. You have set value of "10000" for "maxWait" property, which is being ignored.
+07-Dec-2022 11:11:20.919 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/paula/VIS/apache-tomcat-10.0.27/webapps/ROOT] has finished in [14] ms
+07-Dec-2022 11:11:20.919 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/paula/VIS/apache-tomcat-10.0.27/webapps/manager]
+07-Dec-2022 11:11:20.939 WARNING [main] java.util.ArrayList.forEach Name = UsersDB Property maxActive is not used in DBCP2, use maxTotal instead. maxTotal default value is 8. You have set value of "100" for "maxActive" property, which is being ignored.
+07-Dec-2022 11:11:20.939 WARNING [main] java.util.ArrayList.forEach Name = UsersDB Property maxWait is not used in DBCP2 , use maxWaitMillis instead. maxWaitMillis default value is PT-0.001S. You have set value of "10000" for "maxWait" property, which is being ignored.
+07-Dec-2022 11:11:20.946 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/paula/VIS/apache-tomcat-10.0.27/webapps/manager] has finished in [27] ms
+07-Dec-2022 11:11:20.947 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/paula/VIS/apache-tomcat-10.0.27/webapps/docs]
+07-Dec-2022 11:11:20.960 WARNING [main] java.util.ArrayList.forEach Name = UsersDB Property maxActive is not used in DBCP2, use maxTotal instead. maxTotal default value is 8. You have set value of "100" for "maxActive" property, which is being ignored.
+07-Dec-2022 11:11:20.961 WARNING [main] java.util.ArrayList.forEach Name = UsersDB Property maxWait is not used in DBCP2 , use maxWaitMillis instead. maxWaitMillis default value is PT-0.001S. You have set value of "10000" for "maxWait" property, which is being ignored.
+07-Dec-2022 11:11:20.965 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/paula/VIS/apache-tomcat-10.0.27/webapps/docs] has finished in [19] ms
+07-Dec-2022 11:11:20.965 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/paula/VIS/apache-tomcat-10.0.27/webapps/host-manager]
+07-Dec-2022 11:11:20.976 WARNING [main] java.util.ArrayList.forEach Name = UsersDB Property maxActive is not used in DBCP2, use maxTotal instead. maxTotal default value is 8. You have set value of "100" for "maxActive" property, which is being ignored.
+07-Dec-2022 11:11:20.976 WARNING [main] java.util.ArrayList.forEach Name = UsersDB Property maxWait is not used in DBCP2 , use maxWaitMillis instead. maxWaitMillis default value is PT-0.001S. You have set value of "10000" for "maxWait" property, which is being ignored.
+07-Dec-2022 11:11:20.980 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/paula/VIS/apache-tomcat-10.0.27/webapps/host-manager] has finished in [15] ms
+07-Dec-2022 11:11:20.980 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/paula/VIS/apache-tomcat-10.0.27/webapps/examples]
+07-Dec-2022 11:11:21.026 WARNING [main] java.util.ArrayList.forEach Name = UsersDB Property maxActive is not used in DBCP2, use maxTotal instead. maxTotal default value is 8. You have set value of "100" for "maxActive" property, which is being ignored.
+07-Dec-2022 11:11:21.027 WARNING [main] java.util.ArrayList.forEach Name = UsersDB Property maxWait is not used in DBCP2 , use maxWaitMillis instead. maxWaitMillis default value is PT-0.001S. You have set value of "10000" for "maxWait" property, which is being ignored.
+07-Dec-2022 11:11:21.091 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/paula/VIS/apache-tomcat-10.0.27/webapps/examples] has finished in [110] ms
+07-Dec-2022 11:11:21.093 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [451] milliseconds
+07-Dec-2022 11:11:21.096 SEVERE [main] org.apache.catalina.core.StandardServer.await Failed to create server shutdown socket on address [localhost] and port [8005] (base port [8005] and offset [0])
+	java.net.BindException: Address already in use
+		at java.base/sun.nio.ch.Net.bind0(Native Method)
+		at java.base/sun.nio.ch.Net.bind(Net.java:555)
+		at java.base/sun.nio.ch.Net.bind(Net.java:544)
+		at java.base/sun.nio.ch.NioSocketImpl.bind(NioSocketImpl.java:640)
+		at java.base/java.net.ServerSocket.bind(ServerSocket.java:392)
+		at java.base/java.net.ServerSocket.<init>(ServerSocket.java:274)
+		at org.apache.catalina.core.StandardServer.await(StandardServer.java:580)
+		at org.apache.catalina.startup.Catalina.await(Catalina.java:887)
+		at org.apache.catalina.startup.Catalina.start(Catalina.java:833)
+		at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+		at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+		at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:345)
+		at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:476)
+07-Dec-2022 11:11:21.096 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+07-Dec-2022 11:11:21.097 INFO [main] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+07-Dec-2022 11:11:21.112 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+07-Dec-2022 11:11:21.113 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+07-Dec-2022 11:11:41.593 WARNING [main] org.apache.catalina.core.StandardServer.await Invalid shutdown command [GET / HTTP/1.1] received
+07-Dec-2022 11:11:41.593 WARNING [main] org.apache.catalina.core.StandardServer.await Invalid shutdown command [GET / HTTP/1.1] received
+07-Dec-2022 11:11:41.593 WARNING [main] org.apache.catalina.core.StandardServer.await Invalid shutdown command [GET / HTTP/1.1] received
+07-Dec-2022 11:11:41.594 WARNING [main] org.apache.catalina.core.StandardServer.await Invalid shutdown command [GET / HTTP/1.1] received
+07-Dec-2022 11:11:41.594 WARNING [main] org.apache.catalina.core.StandardServer.await Invalid shutdown command [GET / HTTP/1.1] received
+07-Dec-2022 11:11:41.595 WARNING [main] org.apache.catalina.core.StandardServer.await Invalid shutdown command [GET / HTTP/1.1] received
+07-Dec-2022 11:11:41.595 WARNING [main] org.apache.catalina.core.StandardServer.await Invalid shutdown command [GET / HTTP/1.1] received
+07-Dec-2022 11:11:41.595 WARNING [main] org.apache.catalina.core.StandardServer.await Invalid shutdown command [GET / HTTP/1.1] received
+07-Dec-2022 11:11:41.596 WARNING [main] org.apache.catalina.core.StandardServer.await Invalid shutdown command [GET / HTTP/1.1] received
+07-Dec-2022 11:11:41.596 WARNING [main] org.apache.catalina.core.StandardServer.await Invalid shutdown command [GET / HTTP/1.1] received
+07-Dec-2022 11:11:48.357 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/10.0.27
+07-Dec-2022 11:11:48.359 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Oct 3 2022 14:18:31 UTC
+07-Dec-2022 11:11:48.359 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 10.0.27.0
+07-Dec-2022 11:11:48.360 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Linux
+07-Dec-2022 11:11:48.360 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            6.0.6-76060006-generic
+07-Dec-2022 11:11:48.360 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+07-Dec-2022 11:11:48.360 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /opt/jdk-18
+07-Dec-2022 11:11:48.360 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           18+36-2087
+07-Dec-2022 11:11:48.360 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+07-Dec-2022 11:11:48.360 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /home/paula/VIS/apache-tomcat-10.0.27
+07-Dec-2022 11:11:48.360 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /home/paula/VIS/apache-tomcat-10.0.27
+07-Dec-2022 11:11:48.366 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+07-Dec-2022 11:11:48.366 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+07-Dec-2022 11:11:48.366 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+07-Dec-2022 11:11:48.366 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+07-Dec-2022 11:11:48.366 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+07-Dec-2022 11:11:48.366 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/home/paula/VIS/apache-tomcat-10.0.27/conf/logging.properties
+07-Dec-2022 11:11:48.366 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+07-Dec-2022 11:11:48.366 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+07-Dec-2022 11:11:48.366 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+07-Dec-2022 11:11:48.366 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+07-Dec-2022 11:11:48.366 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+07-Dec-2022 11:11:48.367 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/home/paula/VIS/apache-tomcat-10.0.27
+07-Dec-2022 11:11:48.367 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/home/paula/VIS/apache-tomcat-10.0.27
+07-Dec-2022 11:11:48.367 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/home/paula/VIS/apache-tomcat-10.0.27/temp
+07-Dec-2022 11:11:48.368 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [/usr/java/packages/lib:/usr/lib64:/lib64:/lib:/usr/lib]
+07-Dec-2022 11:11:48.591 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+07-Dec-2022 11:11:48.599 SEVERE [main] org.apache.catalina.util.LifecycleBase.handleSubClassException Failed to initialize component [Connector[HTTP/1.1-8080]]
+	org.apache.catalina.LifecycleException: Protocol handler initialization failed
+		at org.apache.catalina.connector.Connector.initInternal(Connector.java:1055)
+		at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+		at org.apache.catalina.core.StandardService.initInternal(StandardService.java:556)
+		at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+		at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:1045)
+		at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+		at org.apache.catalina.startup.Catalina.load(Catalina.java:747)
+		at org.apache.catalina.startup.Catalina.load(Catalina.java:769)
+		at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+		at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+		at org.apache.catalina.startup.Bootstrap.load(Bootstrap.java:305)
+		at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:475)
+	Caused by: java.net.BindException: Address already in use
+		at java.base/sun.nio.ch.Net.bind0(Native Method)
+		at java.base/sun.nio.ch.Net.bind(Net.java:555)
+		at java.base/sun.nio.ch.ServerSocketChannelImpl.netBind(ServerSocketChannelImpl.java:337)
+		at java.base/sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:294)
+		at org.apache.tomcat.util.net.NioEndpoint.initServerSocket(NioEndpoint.java:246)
+		at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:201)
+		at org.apache.tomcat.util.net.AbstractEndpoint.bindWithCleanup(AbstractEndpoint.java:1192)
+		at org.apache.tomcat.util.net.AbstractEndpoint.init(AbstractEndpoint.java:1205)
+		at org.apache.coyote.AbstractProtocol.init(AbstractProtocol.java:583)
+		at org.apache.coyote.http11.AbstractHttp11Protocol.init(AbstractHttp11Protocol.java:79)
+		at org.apache.catalina.connector.Connector.initInternal(Connector.java:1052)
+		... 11 more
+07-Dec-2022 11:11:48.600 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [370] milliseconds
+07-Dec-2022 11:11:48.628 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+07-Dec-2022 11:11:48.628 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/10.0.27]
+07-Dec-2022 11:11:48.638 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [/home/paula/VIS/apache-tomcat-10.0.27/webapps/demo-1.0-SNAPSHOT.war]
+07-Dec-2022 11:11:48.806 WARNING [main] java.util.ArrayList.forEach Name = UsersDB Property maxActive is not used in DBCP2, use maxTotal instead. maxTotal default value is 8. You have set value of "100" for "maxActive" property, which is being ignored.
+07-Dec-2022 11:11:48.806 WARNING [main] java.util.ArrayList.forEach Name = UsersDB Property maxWait is not used in DBCP2 , use maxWaitMillis instead. maxWaitMillis default value is PT-0.001S. You have set value of "10000" for "maxWait" property, which is being ignored.
+07-Dec-2022 11:11:48.851 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+07-Dec-2022 11:11:48.871 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/home/paula/VIS/apache-tomcat-10.0.27/webapps/demo-1.0-SNAPSHOT.war] has finished in [233] ms
+07-Dec-2022 11:11:48.872 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/paula/VIS/apache-tomcat-10.0.27/webapps/ROOT]
+07-Dec-2022 11:11:48.884 WARNING [main] java.util.ArrayList.forEach Name = UsersDB Property maxActive is not used in DBCP2, use maxTotal instead. maxTotal default value is 8. You have set value of "100" for "maxActive" property, which is being ignored.
+07-Dec-2022 11:11:48.884 WARNING [main] java.util.ArrayList.forEach Name = UsersDB Property maxWait is not used in DBCP2 , use maxWaitMillis instead. maxWaitMillis default value is PT-0.001S. You have set value of "10000" for "maxWait" property, which is being ignored.
+07-Dec-2022 11:11:48.888 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/paula/VIS/apache-tomcat-10.0.27/webapps/ROOT] has finished in [16] ms
+07-Dec-2022 11:11:48.888 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/paula/VIS/apache-tomcat-10.0.27/webapps/manager]
+07-Dec-2022 11:11:48.908 WARNING [main] java.util.ArrayList.forEach Name = UsersDB Property maxActive is not used in DBCP2, use maxTotal instead. maxTotal default value is 8. You have set value of "100" for "maxActive" property, which is being ignored.
+07-Dec-2022 11:11:48.909 WARNING [main] java.util.ArrayList.forEach Name = UsersDB Property maxWait is not used in DBCP2 , use maxWaitMillis instead. maxWaitMillis default value is PT-0.001S. You have set value of "10000" for "maxWait" property, which is being ignored.
+07-Dec-2022 11:11:48.916 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/paula/VIS/apache-tomcat-10.0.27/webapps/manager] has finished in [27] ms
+07-Dec-2022 11:11:48.916 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/paula/VIS/apache-tomcat-10.0.27/webapps/docs]
+07-Dec-2022 11:11:48.930 WARNING [main] java.util.ArrayList.forEach Name = UsersDB Property maxActive is not used in DBCP2, use maxTotal instead. maxTotal default value is 8. You have set value of "100" for "maxActive" property, which is being ignored.
+07-Dec-2022 11:11:48.930 WARNING [main] java.util.ArrayList.forEach Name = UsersDB Property maxWait is not used in DBCP2 , use maxWaitMillis instead. maxWaitMillis default value is PT-0.001S. You have set value of "10000" for "maxWait" property, which is being ignored.
+07-Dec-2022 11:11:48.934 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/paula/VIS/apache-tomcat-10.0.27/webapps/docs] has finished in [18] ms
+07-Dec-2022 11:11:48.934 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/paula/VIS/apache-tomcat-10.0.27/webapps/host-manager]
+07-Dec-2022 11:11:48.945 WARNING [main] java.util.ArrayList.forEach Name = UsersDB Property maxActive is not used in DBCP2, use maxTotal instead. maxTotal default value is 8. You have set value of "100" for "maxActive" property, which is being ignored.
+07-Dec-2022 11:11:48.945 WARNING [main] java.util.ArrayList.forEach Name = UsersDB Property maxWait is not used in DBCP2 , use maxWaitMillis instead. maxWaitMillis default value is PT-0.001S. You have set value of "10000" for "maxWait" property, which is being ignored.
+07-Dec-2022 11:11:48.948 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/paula/VIS/apache-tomcat-10.0.27/webapps/host-manager] has finished in [14] ms
+07-Dec-2022 11:11:48.948 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/paula/VIS/apache-tomcat-10.0.27/webapps/examples]
+07-Dec-2022 11:11:48.994 WARNING [main] java.util.ArrayList.forEach Name = UsersDB Property maxActive is not used in DBCP2, use maxTotal instead. maxTotal default value is 8. You have set value of "100" for "maxActive" property, which is being ignored.
+07-Dec-2022 11:11:48.994 WARNING [main] java.util.ArrayList.forEach Name = UsersDB Property maxWait is not used in DBCP2 , use maxWaitMillis instead. maxWaitMillis default value is PT-0.001S. You have set value of "10000" for "maxWait" property, which is being ignored.
+07-Dec-2022 11:11:49.056 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/paula/VIS/apache-tomcat-10.0.27/webapps/examples] has finished in [108] ms
+07-Dec-2022 11:11:49.059 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [458] milliseconds
+07-Dec-2022 11:11:49.062 SEVERE [main] org.apache.catalina.core.StandardServer.await Failed to create server shutdown socket on address [localhost] and port [8005] (base port [8005] and offset [0])
+	java.net.BindException: Address already in use
+		at java.base/sun.nio.ch.Net.bind0(Native Method)
+		at java.base/sun.nio.ch.Net.bind(Net.java:555)
+		at java.base/sun.nio.ch.Net.bind(Net.java:544)
+		at java.base/sun.nio.ch.NioSocketImpl.bind(NioSocketImpl.java:640)
+		at java.base/java.net.ServerSocket.bind(ServerSocket.java:392)
+		at java.base/java.net.ServerSocket.<init>(ServerSocket.java:274)
+		at org.apache.catalina.core.StandardServer.await(StandardServer.java:580)
+		at org.apache.catalina.startup.Catalina.await(Catalina.java:887)
+		at org.apache.catalina.startup.Catalina.start(Catalina.java:833)
+		at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+		at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+		at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:345)
+		at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:476)
+07-Dec-2022 11:11:49.062 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+07-Dec-2022 11:11:49.062 INFO [main] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+07-Dec-2022 11:11:49.080 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+07-Dec-2022 11:11:49.081 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+07-Dec-2022 11:12:04.473 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/10.0.27
+07-Dec-2022 11:12:04.476 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Oct 3 2022 14:18:31 UTC
+07-Dec-2022 11:12:04.476 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 10.0.27.0
+07-Dec-2022 11:12:04.476 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Linux
+07-Dec-2022 11:12:04.476 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            6.0.6-76060006-generic
+07-Dec-2022 11:12:04.476 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+07-Dec-2022 11:12:04.476 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /opt/jdk-18
+07-Dec-2022 11:12:04.476 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           18+36-2087
+07-Dec-2022 11:12:04.476 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+07-Dec-2022 11:12:04.476 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /home/paula/VIS/apache-tomcat-10.0.27
+07-Dec-2022 11:12:04.477 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /home/paula/VIS/apache-tomcat-10.0.27
+07-Dec-2022 11:12:04.482 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+07-Dec-2022 11:12:04.482 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+07-Dec-2022 11:12:04.482 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+07-Dec-2022 11:12:04.482 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+07-Dec-2022 11:12:04.482 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+07-Dec-2022 11:12:04.482 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/home/paula/VIS/apache-tomcat-10.0.27/conf/logging.properties
+07-Dec-2022 11:12:04.482 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+07-Dec-2022 11:12:04.483 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+07-Dec-2022 11:12:04.483 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+07-Dec-2022 11:12:04.483 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+07-Dec-2022 11:12:04.483 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+07-Dec-2022 11:12:04.483 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/home/paula/VIS/apache-tomcat-10.0.27
+07-Dec-2022 11:12:04.483 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/home/paula/VIS/apache-tomcat-10.0.27
+07-Dec-2022 11:12:04.483 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/home/paula/VIS/apache-tomcat-10.0.27/temp
+07-Dec-2022 11:12:04.484 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [/usr/java/packages/lib:/usr/lib64:/lib64:/lib:/usr/lib]
+07-Dec-2022 11:12:04.716 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+07-Dec-2022 11:12:04.725 SEVERE [main] org.apache.catalina.util.LifecycleBase.handleSubClassException Failed to initialize component [Connector[HTTP/1.1-8080]]
+	org.apache.catalina.LifecycleException: Protocol handler initialization failed
+		at org.apache.catalina.connector.Connector.initInternal(Connector.java:1055)
+		at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+		at org.apache.catalina.core.StandardService.initInternal(StandardService.java:556)
+		at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+		at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:1045)
+		at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+		at org.apache.catalina.startup.Catalina.load(Catalina.java:747)
+		at org.apache.catalina.startup.Catalina.load(Catalina.java:769)
+		at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+		at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+		at org.apache.catalina.startup.Bootstrap.load(Bootstrap.java:305)
+		at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:475)
+	Caused by: java.net.BindException: Address already in use
+		at java.base/sun.nio.ch.Net.bind0(Native Method)
+		at java.base/sun.nio.ch.Net.bind(Net.java:555)
+		at java.base/sun.nio.ch.ServerSocketChannelImpl.netBind(ServerSocketChannelImpl.java:337)
+		at java.base/sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:294)
+		at org.apache.tomcat.util.net.NioEndpoint.initServerSocket(NioEndpoint.java:246)
+		at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:201)
+		at org.apache.tomcat.util.net.AbstractEndpoint.bindWithCleanup(AbstractEndpoint.java:1192)
+		at org.apache.tomcat.util.net.AbstractEndpoint.init(AbstractEndpoint.java:1205)
+		at org.apache.coyote.AbstractProtocol.init(AbstractProtocol.java:583)
+		at org.apache.coyote.http11.AbstractHttp11Protocol.init(AbstractHttp11Protocol.java:79)
+		at org.apache.catalina.connector.Connector.initInternal(Connector.java:1052)
+		... 11 more
+07-Dec-2022 11:12:04.725 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [382] milliseconds
+07-Dec-2022 11:12:04.751 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+07-Dec-2022 11:12:04.751 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/10.0.27]
+07-Dec-2022 11:12:04.762 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [/home/paula/VIS/apache-tomcat-10.0.27/webapps/demo-1.0-SNAPSHOT.war]
+07-Dec-2022 11:12:04.931 WARNING [main] java.util.ArrayList.forEach Name = UsersDB Property maxActive is not used in DBCP2, use maxTotal instead. maxTotal default value is 8. You have set value of "100" for "maxActive" property, which is being ignored.
+07-Dec-2022 11:12:04.931 WARNING [main] java.util.ArrayList.forEach Name = UsersDB Property maxWait is not used in DBCP2 , use maxWaitMillis instead. maxWaitMillis default value is PT-0.001S. You have set value of "10000" for "maxWait" property, which is being ignored.
+07-Dec-2022 11:12:04.975 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+07-Dec-2022 11:12:04.997 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/home/paula/VIS/apache-tomcat-10.0.27/webapps/demo-1.0-SNAPSHOT.war] has finished in [235] ms
+07-Dec-2022 11:12:04.998 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/paula/VIS/apache-tomcat-10.0.27/webapps/ROOT]
+07-Dec-2022 11:12:05.009 WARNING [main] java.util.ArrayList.forEach Name = UsersDB Property maxActive is not used in DBCP2, use maxTotal instead. maxTotal default value is 8. You have set value of "100" for "maxActive" property, which is being ignored.
+07-Dec-2022 11:12:05.010 WARNING [main] java.util.ArrayList.forEach Name = UsersDB Property maxWait is not used in DBCP2 , use maxWaitMillis instead. maxWaitMillis default value is PT-0.001S. You have set value of "10000" for "maxWait" property, which is being ignored.
+07-Dec-2022 11:12:05.014 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/paula/VIS/apache-tomcat-10.0.27/webapps/ROOT] has finished in [16] ms
+07-Dec-2022 11:12:05.014 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/paula/VIS/apache-tomcat-10.0.27/webapps/manager]
+07-Dec-2022 11:12:05.036 WARNING [main] java.util.ArrayList.forEach Name = UsersDB Property maxActive is not used in DBCP2, use maxTotal instead. maxTotal default value is 8. You have set value of "100" for "maxActive" property, which is being ignored.
+07-Dec-2022 11:12:05.037 WARNING [main] java.util.ArrayList.forEach Name = UsersDB Property maxWait is not used in DBCP2 , use maxWaitMillis instead. maxWaitMillis default value is PT-0.001S. You have set value of "10000" for "maxWait" property, which is being ignored.
+07-Dec-2022 11:12:05.044 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/paula/VIS/apache-tomcat-10.0.27/webapps/manager] has finished in [30] ms
+07-Dec-2022 11:12:05.044 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/paula/VIS/apache-tomcat-10.0.27/webapps/docs]
+07-Dec-2022 11:12:05.060 WARNING [main] java.util.ArrayList.forEach Name = UsersDB Property maxActive is not used in DBCP2, use maxTotal instead. maxTotal default value is 8. You have set value of "100" for "maxActive" property, which is being ignored.
+07-Dec-2022 11:12:05.060 WARNING [main] java.util.ArrayList.forEach Name = UsersDB Property maxWait is not used in DBCP2 , use maxWaitMillis instead. maxWaitMillis default value is PT-0.001S. You have set value of "10000" for "maxWait" property, which is being ignored.
+07-Dec-2022 11:12:05.064 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/paula/VIS/apache-tomcat-10.0.27/webapps/docs] has finished in [20] ms
+07-Dec-2022 11:12:05.064 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/paula/VIS/apache-tomcat-10.0.27/webapps/host-manager]
+07-Dec-2022 11:12:05.074 WARNING [main] java.util.ArrayList.forEach Name = UsersDB Property maxActive is not used in DBCP2, use maxTotal instead. maxTotal default value is 8. You have set value of "100" for "maxActive" property, which is being ignored.
+07-Dec-2022 11:12:05.074 WARNING [main] java.util.ArrayList.forEach Name = UsersDB Property maxWait is not used in DBCP2 , use maxWaitMillis instead. maxWaitMillis default value is PT-0.001S. You have set value of "10000" for "maxWait" property, which is being ignored.
+07-Dec-2022 11:12:05.078 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/paula/VIS/apache-tomcat-10.0.27/webapps/host-manager] has finished in [14] ms
+07-Dec-2022 11:12:05.078 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/paula/VIS/apache-tomcat-10.0.27/webapps/examples]
+07-Dec-2022 11:12:05.125 WARNING [main] java.util.ArrayList.forEach Name = UsersDB Property maxActive is not used in DBCP2, use maxTotal instead. maxTotal default value is 8. You have set value of "100" for "maxActive" property, which is being ignored.
+07-Dec-2022 11:12:05.125 WARNING [main] java.util.ArrayList.forEach Name = UsersDB Property maxWait is not used in DBCP2 , use maxWaitMillis instead. maxWaitMillis default value is PT-0.001S. You have set value of "10000" for "maxWait" property, which is being ignored.
+07-Dec-2022 11:12:05.187 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/paula/VIS/apache-tomcat-10.0.27/webapps/examples] has finished in [109] ms
+07-Dec-2022 11:12:05.189 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [462] milliseconds
+07-Dec-2022 11:12:28.050 INFO [Thread-1] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+07-Dec-2022 11:12:28.051 INFO [Thread-1] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+07-Dec-2022 11:12:28.077 INFO [Thread-1] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+07-Dec-2022 11:12:28.078 INFO [Thread-1] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+07-Dec-2022 11:12:38.087 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/10.0.27
+07-Dec-2022 11:12:38.089 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Oct 3 2022 14:18:31 UTC
+07-Dec-2022 11:12:38.089 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 10.0.27.0
+07-Dec-2022 11:12:38.090 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Linux
+07-Dec-2022 11:12:38.090 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            6.0.6-76060006-generic
+07-Dec-2022 11:12:38.090 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+07-Dec-2022 11:12:38.090 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /opt/jdk-18
+07-Dec-2022 11:12:38.090 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           18+36-2087
+07-Dec-2022 11:12:38.090 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+07-Dec-2022 11:12:38.090 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /home/paula/VIS/apache-tomcat-10.0.27
+07-Dec-2022 11:12:38.090 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /home/paula/VIS/apache-tomcat-10.0.27
+07-Dec-2022 11:12:38.096 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+07-Dec-2022 11:12:38.096 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+07-Dec-2022 11:12:38.096 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+07-Dec-2022 11:12:38.096 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+07-Dec-2022 11:12:38.096 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+07-Dec-2022 11:12:38.096 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/home/paula/VIS/apache-tomcat-10.0.27/conf/logging.properties
+07-Dec-2022 11:12:38.096 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+07-Dec-2022 11:12:38.097 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+07-Dec-2022 11:12:38.097 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+07-Dec-2022 11:12:38.097 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+07-Dec-2022 11:12:38.097 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+07-Dec-2022 11:12:38.097 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/home/paula/VIS/apache-tomcat-10.0.27
+07-Dec-2022 11:12:38.097 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/home/paula/VIS/apache-tomcat-10.0.27
+07-Dec-2022 11:12:38.097 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/home/paula/VIS/apache-tomcat-10.0.27/temp
+07-Dec-2022 11:12:38.098 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [/usr/java/packages/lib:/usr/lib64:/lib64:/lib:/usr/lib]
+07-Dec-2022 11:12:38.363 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+07-Dec-2022 11:12:38.379 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [422] milliseconds
+07-Dec-2022 11:12:38.408 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+07-Dec-2022 11:12:38.409 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/10.0.27]
+07-Dec-2022 11:12:38.418 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [/home/paula/VIS/apache-tomcat-10.0.27/webapps/demo-1.0-SNAPSHOT.war]
+07-Dec-2022 11:12:38.594 WARNING [main] java.util.ArrayList.forEach Name = UsersDB Property maxActive is not used in DBCP2, use maxTotal instead. maxTotal default value is 8. You have set value of "100" for "maxActive" property, which is being ignored.
+07-Dec-2022 11:12:38.594 WARNING [main] java.util.ArrayList.forEach Name = UsersDB Property maxWait is not used in DBCP2 , use maxWaitMillis instead. maxWaitMillis default value is PT-0.001S. You have set value of "10000" for "maxWait" property, which is being ignored.
+07-Dec-2022 11:12:38.641 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+07-Dec-2022 11:12:38.666 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/home/paula/VIS/apache-tomcat-10.0.27/webapps/demo-1.0-SNAPSHOT.war] has finished in [247] ms
+07-Dec-2022 11:12:38.666 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/paula/VIS/apache-tomcat-10.0.27/webapps/ROOT]
+07-Dec-2022 11:12:38.677 WARNING [main] java.util.ArrayList.forEach Name = UsersDB Property maxActive is not used in DBCP2, use maxTotal instead. maxTotal default value is 8. You have set value of "100" for "maxActive" property, which is being ignored.
+07-Dec-2022 11:12:38.677 WARNING [main] java.util.ArrayList.forEach Name = UsersDB Property maxWait is not used in DBCP2 , use maxWaitMillis instead. maxWaitMillis default value is PT-0.001S. You have set value of "10000" for "maxWait" property, which is being ignored.
+07-Dec-2022 11:12:38.681 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/paula/VIS/apache-tomcat-10.0.27/webapps/ROOT] has finished in [15] ms
+07-Dec-2022 11:12:38.681 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/paula/VIS/apache-tomcat-10.0.27/webapps/manager]
+07-Dec-2022 11:12:38.701 WARNING [main] java.util.ArrayList.forEach Name = UsersDB Property maxActive is not used in DBCP2, use maxTotal instead. maxTotal default value is 8. You have set value of "100" for "maxActive" property, which is being ignored.
+07-Dec-2022 11:12:38.701 WARNING [main] java.util.ArrayList.forEach Name = UsersDB Property maxWait is not used in DBCP2 , use maxWaitMillis instead. maxWaitMillis default value is PT-0.001S. You have set value of "10000" for "maxWait" property, which is being ignored.
+07-Dec-2022 11:12:38.716 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/paula/VIS/apache-tomcat-10.0.27/webapps/manager] has finished in [35] ms
+07-Dec-2022 11:12:38.716 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/paula/VIS/apache-tomcat-10.0.27/webapps/docs]
+07-Dec-2022 11:12:38.730 WARNING [main] java.util.ArrayList.forEach Name = UsersDB Property maxActive is not used in DBCP2, use maxTotal instead. maxTotal default value is 8. You have set value of "100" for "maxActive" property, which is being ignored.
+07-Dec-2022 11:12:38.730 WARNING [main] java.util.ArrayList.forEach Name = UsersDB Property maxWait is not used in DBCP2 , use maxWaitMillis instead. maxWaitMillis default value is PT-0.001S. You have set value of "10000" for "maxWait" property, which is being ignored.
+07-Dec-2022 11:12:38.734 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/paula/VIS/apache-tomcat-10.0.27/webapps/docs] has finished in [17] ms
+07-Dec-2022 11:12:38.734 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/paula/VIS/apache-tomcat-10.0.27/webapps/host-manager]
+07-Dec-2022 11:12:38.748 WARNING [main] java.util.ArrayList.forEach Name = UsersDB Property maxActive is not used in DBCP2, use maxTotal instead. maxTotal default value is 8. You have set value of "100" for "maxActive" property, which is being ignored.
+07-Dec-2022 11:12:38.748 WARNING [main] java.util.ArrayList.forEach Name = UsersDB Property maxWait is not used in DBCP2 , use maxWaitMillis instead. maxWaitMillis default value is PT-0.001S. You have set value of "10000" for "maxWait" property, which is being ignored.
+07-Dec-2022 11:12:38.752 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/paula/VIS/apache-tomcat-10.0.27/webapps/host-manager] has finished in [18] ms
+07-Dec-2022 11:12:38.753 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/paula/VIS/apache-tomcat-10.0.27/webapps/examples]
+07-Dec-2022 11:12:38.813 WARNING [main] java.util.ArrayList.forEach Name = UsersDB Property maxActive is not used in DBCP2, use maxTotal instead. maxTotal default value is 8. You have set value of "100" for "maxActive" property, which is being ignored.
+07-Dec-2022 11:12:38.813 WARNING [main] java.util.ArrayList.forEach Name = UsersDB Property maxWait is not used in DBCP2 , use maxWaitMillis instead. maxWaitMillis default value is PT-0.001S. You have set value of "10000" for "maxWait" property, which is being ignored.
+07-Dec-2022 11:12:38.895 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/paula/VIS/apache-tomcat-10.0.27/webapps/examples] has finished in [142] ms
+07-Dec-2022 11:12:38.897 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+07-Dec-2022 11:12:38.905 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [524] milliseconds
+07-Dec-2022 11:12:48.625 INFO [Thread-1] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+07-Dec-2022 11:12:48.628 INFO [Thread-1] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+07-Dec-2022 11:12:48.654 INFO [Thread-1] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+07-Dec-2022 11:12:48.661 INFO [Thread-1] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]

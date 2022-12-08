@@ -5,24 +5,18 @@ import java.io.PrintWriter;
 import java.io.IOException;
 import com.example.vis.models.AdminModel;
 import jakarta.servlet.ServletException;
-import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
-@WebServlet("/hello")
 public class HelloController extends HttpServlet {
-
     @Override
-    public void init() throws ServletException {
-        super.init();
-    }
-
-    @Override
-    public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
+    public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         AdminModel x = new AdminModel();
-        PrintWriter writer = response.getWriter();
-        writer.println(x.getAll().get(0).getEmail());
+//        PrintWriter writer = response.getWriter();
+//        writer.println(x.getAll().get(0).getEmail());
+        request.setAttribute("email", x.getAll().get(0).getEmail());
+        request.getRequestDispatcher("index.jsp").forward(request, response);
     }
 
 
