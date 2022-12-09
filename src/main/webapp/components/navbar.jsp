@@ -2,12 +2,12 @@
     String path = request.getRequestURL().toString();
     String []jspFiles = {
             "http://localhost:8080/",
-            "http://localhost:8080/index.jsp",
-            "http://localhost:8080/index.jsp",
+            "http://localhost:8080/admin-login.jsp",
+            "http://localhost:8080/admin.jsp",
             "http://localhost:8080/index.jsp",
     };
-    String []routeNames = {"Home","Admin Login","test", "test"};
-    String []realRoutes = {"/","/","/","/"};
+    String []routeNames = {"Home","Admin Login","Admin", "test"};
+    String []realRoutes = {"/","/admin-login","/admin","/"};
 %>
 
 <nav class=" navbar-inverse">

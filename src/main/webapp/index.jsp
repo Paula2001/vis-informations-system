@@ -7,7 +7,9 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
-<%@include file="components/header.jsp"%>
+<jsp:include page="components/header.jsp">
+    <jsp:param name="title" value="FAST RESCUE"/>
+</jsp:include>
 <body>
 <%@include file="components/navbar.jsp"%>
 <%@include file="components/slideshow.jsp"%>

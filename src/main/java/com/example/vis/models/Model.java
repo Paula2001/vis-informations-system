@@ -28,4 +28,19 @@ abstract class Model<T> {
 
         return models;
     }
+
+    public List<T> where(String whereString) {
+        ResultSet result = DATABASE_CONNECTION.select(this.getTableName(), "*", whereString);
+
+        try{
+            while (result.next()) {
+                models.add(getModelInstance(result));
+            }
+        }catch (SQLException e){
+            System.out.println(e.getMessage());
+        }
+
+        return models;
+
+    }
 }

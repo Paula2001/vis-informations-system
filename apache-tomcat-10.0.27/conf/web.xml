@@ -4743,12 +4743,12 @@
     <servlet>
         <description>This is the description of my J2EE component</description>
         <display-name>This is the display name of my J2EE component</display-name>
-        <servlet-name>main</servlet-name>
-        <servlet-class>com.example.vis.controllers.HelloController</servlet-class>
+        <servlet-name>admin-login</servlet-name>
+        <servlet-class>com.example.vis.controllers.AdminController</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>main</servlet-name>
-        <url-pattern>/soso</url-pattern>
+        <servlet-name>admin-login</servlet-name>
+        <url-pattern>/admin-login</url-pattern>
     </servlet-mapping>
     <welcome-file-list>
         <welcome-file>index.jsp</welcome-file>
