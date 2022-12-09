@@ -8,14 +8,14 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <jsp:include page="components/header.jsp">
-    <jsp:param name="title" value="FAST RESCUE"/>
+    <jsp:param name="title" value="FAST RESCUE | LOGIN"/>
 </jsp:include>
 <body>
 <%@include file="components/navbar.jsp"%>
 
 <div class="container login-container">
     <div class="h-100 d-flex align-items-center justify-content-center login-form-1">
-        <h3>Login for Form 1</h3>
+        <h3>Admin Login</h3>
         <div>
             <div class="form-group">
                 <input id="email" type="text" class="form-control" placeholder="Your Email *" />

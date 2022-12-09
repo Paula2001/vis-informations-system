@@ -2,26 +2,19 @@ package com.example.vis.controllers;
 
 
 import com.example.vis.models.AdminModel;
-import jakarta.enterprise.context.SessionScoped;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-
-import java.awt.desktop.UserSessionEvent;
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.math.BigInteger;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
+import java.util.List;
 
-public class AdminController extends HttpServlet {
+public class AdminAuthController extends HttpServlet {
     @Override
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
-        AdminModel x = new AdminModel();
-//        PrintWriter writer = response.getWriter();
-//        writer.println(x.getAll().get(0).getEmail());
-        request.setAttribute("email", x.getAll().get(0).getEmail());
         request.getRequestDispatcher("admin-login.jsp").forward(request, response);
     }
 
@@ -31,9 +24,12 @@ public class AdminController extends HttpServlet {
         AdminModel admin = new AdminModel();
         String email = req.getParameter("email");
         String password = req.getParameter("password");
-
-        if (getMd5(password).equals(admin.where("where email = " + "'" + email + "'").get(0).getPassword())) { // TODO : lovely SQL injection <3
+        List<AdminModel> admins = admin.where("where email = " + "'" + email + "'");
+        if (getMd5(password).equals(admins.get(0).getPassword())) { // TODO : lovely SQL injection <3
             req.getSession().setAttribute("isLoggedInAdmin", "true");
+            req.getSession().setAttribute("adminEmail", email);
+            req.getSession().setAttribute("adminId", admins.get(0).getId());
+            req.getSession().setAttribute("adminName", admins.get(0).getName());
             resp.setStatus(200);
             return;
         }

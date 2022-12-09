@@ -4744,12 +4744,29 @@
         <description>This is the description of my J2EE component</description>
         <display-name>This is the display name of my J2EE component</display-name>
         <servlet-name>admin-login</servlet-name>
-        <servlet-class>com.example.vis.controllers.AdminController</servlet-class>
+        <servlet-class>com.example.vis.controllers.AdminAuthController</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>admin-login</servlet-name>
         <url-pattern>/admin-login</url-pattern>
     </servlet-mapping>
+<!--    <filter>-->
+<!--        <filter-name>AdminLogin</filter-name>-->
+<!--        <filter-class>com.example.vis.middlewares.AdminLogin</filter-class>-->
+<!--    </filter>-->
+    <filter>
+        <filter-name>AdminNotLogin</filter-name>
+        <filter-class>com.example.vis.middlewares.AdminNotLogin</filter-class>
+    </filter>
+<!--    <filter-mapping>-->
+<!--        <filter-name>AdminLogin</filter-name>-->
+<!--        <servlet-name>admin-login</servlet-name>-->
+<!--    </filter-mapping>-->
+
+    <filter-mapping>
+        <filter-name>AdminNotLogin</filter-name>
+        <servlet-name>admin-login</servlet-name>
+    </filter-mapping>
     <welcome-file-list>
         <welcome-file>index.jsp</welcome-file>
     </welcome-file-list>
