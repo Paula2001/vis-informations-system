@@ -7,12 +7,7 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
-<head>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <title>Title</title>
-</head>
+<%@include file="components/header.jsp"%>
 <body>
 <%@include file="components/navbar.jsp"%>
 <%@include file="components/slideshow.jsp"%>
@@ -20,7 +15,7 @@
 <div class="container">
     <div class="col-lg-8">
         <strong>
-            <h1 style="text-decoration: underline" class="fa-align-left">About Fast Ambulance</h1>
+            <h1 style="text-decoration: underline" class="fa-align-left">About Fast Rescue</h1>
         </strong>
         <h4>
             I'm going to start this with a story.
@@ -37,7 +32,7 @@
             heart attacks the situation will be different here where my idea come to play
             <br/>
             <br/>
-            <strong>"Fast Ambulance"</strong>
+            <strong>"Fast Rescue"</strong>
             is targeting cases which is hard to be reached by regular ambulances using
             regular civilians in the area.
             <br/>
@@ -90,8 +85,6 @@
     </h4>
 </div>
 
-
-<p><%=request.getContextPath()%></p>
-<p><%=request.getAttribute("email")%></p>
+<%@include file="components/footer.jsp"%>
 </body>
 </html>
