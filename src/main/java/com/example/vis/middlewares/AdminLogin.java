@@ -1,5 +1,7 @@
 package com.example.vis.middlewares;
 
+import com.example.vis.controllers.AdminAuthController;
+import com.example.vis.controllers.AdminController;
 import jakarta.servlet.*;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
@@ -13,12 +15,14 @@ public class AdminLogin implements Filter{
 
     public void doFilter(ServletRequest req, ServletResponse resp,
                          FilterChain chain) throws IOException, ServletException {
-//        PrintWriter out=resp.getWriter();
-//        if (!((HttpServletRequest) req).getSession().getAttribute("isLoggedInAdmin").equals("true")) {
-            chain.doFilter(req, resp);
-//        }
+        Object isLoggedInAdmin =  ((HttpServletRequest) req).getSession().getAttribute("isLoggedInAdmin");
+        String valueOfSession = isLoggedInAdmin != null? isLoggedInAdmin.toString() : "false" ;
 
-//        out.print("filter is invoked after");
+        if (valueOfSession.equals("true")){
+            chain.doFilter(req, resp);
+            return;
+        }
+        ((HttpServletResponse) resp).sendRedirect("http://localhost:8080/admin-login");
     }
     public void destroy() {
         // TODO this is should be with the destruction of the object

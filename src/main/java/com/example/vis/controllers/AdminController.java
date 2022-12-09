@@ -5,21 +5,22 @@ import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+
 import java.io.IOException;
 import java.math.BigInteger;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.List;
 
-public class AdminAuthController extends HttpServlet {
+public class AdminController extends HttpServlet {
     @Override
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
-        request.getRequestDispatcher("admin-login.jsp").forward(request, response);
+        request.getRequestDispatcher("admin.jsp").forward(request, response);
     }
 
 
     @Override
-    public void doPost(HttpServletRequest req, HttpServletResponse resp) {
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) {
         AdminModel admin = new AdminModel();
         String email = req.getParameter("email");
         String password = req.getParameter("password");
@@ -33,15 +34,6 @@ public class AdminAuthController extends HttpServlet {
             return;
         }
         resp.setStatus(401);
-    }
-
-    @Override
-    public void doPut(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        req.getSession().setAttribute("isLoggedInAdmin", "false");
-        req.getSession().setAttribute("adminEmail", null);
-        req.getSession().setAttribute("adminId", null);
-        req.getSession().setAttribute("adminName", null);
-        resp.sendRedirect("http://localhost:8080/admin-login");
     }
 
     private static String getMd5(String input)

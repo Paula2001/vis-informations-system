@@ -28,6 +28,10 @@
                     </li>
                 <% } %>
             </ul>
+            <form action="/admin-login">
+                <input type="hidden" name="_method" value="put" />
+                <button style="float: right" class="danger">Logout</button>
+            </form>
         </div>
     </div>
 </nav>
