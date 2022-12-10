@@ -8,13 +8,16 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <jsp:include page="components/header.jsp">
-    <jsp:param name="title" value="FAST RESCUE | LOGIN"/>
+    <jsp:param name="title" value="Upload Tutorials"/>
 </jsp:include>
 <body>
 <%@include file="components/navbar.jsp"%>
 
 <div class="container">
-    <h1>I am in admin</h1>
+    <h1><%=Helper.getServerRoute(request)%></h1>
+    <form method="post" action="<%=request.getServerName()%>">
+
+    </form>
 </div>
 
 <%@include file="components/footer.jsp"%>

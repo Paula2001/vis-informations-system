@@ -34,6 +34,7 @@
         margin-bottom: 5%;
         height: 68%;
         width: 30%;
+        min-width: 400px;
     }
     .login-form-1{
         padding: 5%;

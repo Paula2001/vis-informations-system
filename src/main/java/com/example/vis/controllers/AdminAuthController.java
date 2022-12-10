@@ -26,9 +26,9 @@ public class AdminAuthController extends HttpServlet {
         List<AdminModel> admins = admin.where("where email = " + "'" + email + "'");
         if (getMd5(password).equals(admins.get(0).getPassword())) { // TODO : lovely SQL injection <3
             req.getSession().setAttribute("isLoggedInAdmin", "true");
-            req.getSession().setAttribute("adminEmail", email);
-            req.getSession().setAttribute("adminId", admins.get(0).getId());
-            req.getSession().setAttribute("adminName", admins.get(0).getName());
+            req.getSession().setAttribute("email", email);
+            req.getSession().setAttribute("id", admins.get(0).getId());
+            req.getSession().setAttribute("name", admins.get(0).getName());
             resp.getWriter().println("http://localhost:8080/admin");
             resp.setStatus(200);
             return;

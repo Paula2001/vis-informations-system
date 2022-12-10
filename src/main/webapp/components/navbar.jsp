@@ -6,22 +6,24 @@
 
     List<HashMap<String , String>> routes = new ArrayList<HashMap<String,String>>();
 
+    String baseRoute = Helper.getServerRoute(request);
+
     routes.add(0, Helper.createRoute(
-            "http://localhost:8080/",
+            baseRoute,
             "Home",
             "/",
             "both"
     ));
 
     routes.add(1, Helper.createRoute(
-            "http://localhost:8080/admin-login.jsp",
+            baseRoute+"/admin-login.jsp",
             "Admin Login",
             "/admin-login",
             "false"
     ));
 
     routes.add(2, Helper.createRoute(
-            "http://localhost:8080/admin.jsp",
+            baseRoute+"/admin.jsp",
             "Admin",
             "/admin",
             "true"
@@ -29,6 +31,7 @@
 
 
     Object isLoggedIn = request.getSession().getAttribute("isLoggedInAdmin");
+    Object loggedName = request.getSession().getAttribute("name");
 %>
 
 <nav class=" navbar-inverse">
@@ -39,7 +42,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="https://paula-george.guru">FAST AMBULANCE</a>
+            <a class="navbar-brand" href="<%=baseRoute%>">FAST RESCUE</a>
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav">
@@ -56,7 +59,9 @@
             <% if( isLoggedIn != null && isLoggedIn.equals("true")) { %>
                 <form action="/admin-login">
                     <input type="hidden" name="_method" value="put" />
-                    <button style="float: right;margin: 5px;" class="btn btn-danger">Logout</button>
+                    <button style="float: right;margin: 5px;" class="btn btn-danger">
+                        Welcome <%=loggedName %>, Logout from here
+                    </button>
                 </form>
             <% } %>
         </div>
