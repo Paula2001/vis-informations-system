@@ -50,14 +50,14 @@
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav">
-                <% for (int i = 0;i < routes.size();i++) { %>
-                    <% if( routes.get(i).get("isLoggedIn").equals(isLoggedIn) || routes.get(i).get("isLoggedIn").equals("both")) { %>
-                        <li class="<% if (path.equals(routes.get(i).get("url"))) { %> active <% } %>">
-                            <a href="<%=routes.get(i).get("realRoute")%>">
-                                <%=routes.get(i).get("name")%>
-                            </a>
-                        </li>
-                    <% } %>
+                <% for (HashMap<String, String> route : routes) { %>
+                    <% if (route.get("isLoggedIn").equals(isLoggedIn) || route.get("isLoggedIn").equals("both")) { %>
+                    <li class="<% if (path.equals(route.get("url"))) { %> active <% } %>">
+                        <a href="<%=route.get("realRoute")%>">
+                            <%=route.get("name")%>
+                        </a>
+                    </li>
+                <% } %>
                 <% } %>
             </ul>
             <% if( isLoggedIn != null && isLoggedIn.equals("true")) { %>
