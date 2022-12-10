@@ -14,9 +14,13 @@
 <%@include file="components/navbar.jsp"%>
 
 <div class="container">
-    <h1><%=Helper.getServerRoute(request)%></h1>
-    <form method="post" action="<%=request.getServerName()%>">
-
+    <form
+            method="post"
+            enctype="multipart/form-data"
+            action="<%=Helper.getServerRoute(request)%>/admin"
+    >
+        <input type="file" name="video">
+        <input type="submit" value="Upload" name="submit">
     </form>
 </div>
 

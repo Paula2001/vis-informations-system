@@ -1,17 +1,14 @@
 package com.example.vis.controllers;
 
+import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpServletRequest;
 import com.example.vis.models.AdminModel;
 import jakarta.servlet.ServletException;
-import jakarta.servlet.http.HttpServlet;
-import jakarta.servlet.http.HttpServletRequest;
-import jakarta.servlet.http.HttpServletResponse;
+import com.example.vis.helpers.Helper;
 import java.io.IOException;
-import java.math.BigInteger;
-import java.security.MessageDigest;
-import java.security.NoSuchAlgorithmException;
 import java.util.List;
 
-public class AdminAuthController extends HttpServlet {
+public class AdminAuthController extends Controller {
     @Override
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         request.getRequestDispatcher("admin-login.jsp").forward(request, response);
@@ -24,12 +21,12 @@ public class AdminAuthController extends HttpServlet {
         String email = req.getParameter("email");
         String password = req.getParameter("password");
         List<AdminModel> admins = admin.where("where email = " + "'" + email + "'");
-        if (getMd5(password).equals(admins.get(0).getPassword())) { // TODO : lovely SQL injection <3
+        if (Helper.getMd5(password).equals(admins.get(0).getPassword())) { // TODO : lovely SQL injection <3
             req.getSession().setAttribute("isLoggedInAdmin", "true");
             req.getSession().setAttribute("email", email);
             req.getSession().setAttribute("id", admins.get(0).getId());
             req.getSession().setAttribute("name", admins.get(0).getName());
-            resp.getWriter().println("http://localhost:8080/admin");
+            resp.getWriter().println(Helper.getServerRoute(req) + "/admin");
             resp.setStatus(200);
             return;
         }
@@ -42,27 +39,6 @@ public class AdminAuthController extends HttpServlet {
         req.getSession().setAttribute("adminEmail", null);
         req.getSession().setAttribute("adminId", null);
         req.getSession().setAttribute("adminName", null);
-        resp.sendRedirect("http://localhost:8080/admin-login");
-    }
-
-    private static String getMd5(String input)
-    {
-        try {
-            MessageDigest md = MessageDigest.getInstance("MD5");
-
-            byte[] messageDigest = md.digest(input.getBytes());
-
-            BigInteger no = new BigInteger(1, messageDigest);
-
-            String hashtext = no.toString(16);
-            while (hashtext.length() < 32) {
-                hashtext = "0" + hashtext;
-            }
-            return hashtext;
-        }
-
-        catch (NoSuchAlgorithmException e) {
-            throw new RuntimeException(e);
-        }
+        resp.sendRedirect(Helper.getServerRoute(req) + "/admin-login");
     }
 }

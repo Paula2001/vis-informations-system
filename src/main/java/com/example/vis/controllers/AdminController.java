@@ -2,58 +2,50 @@ package com.example.vis.controllers;
 
 import com.example.vis.models.AdminModel;
 import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.MultipartConfig;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.Part;
 
+import java.io.File;
 import java.io.IOException;
 import java.math.BigInteger;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.List;
+@MultipartConfig(fileSizeThreshold = 1024 * 1024,
+        maxFileSize = 1024 * 1024 * 5,
+        maxRequestSize = 1024 * 1024 * 5 * 5)
+public class AdminController extends Controller {
+    private static final String UPLOAD_DIRECTORY = "/";
+    private static final String DEFAULT_FILENAME = "lol";
 
-public class AdminController extends HttpServlet {
     @Override
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         request.getRequestDispatcher("admin.jsp").forward(request, response);
     }
 
-
     @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) {
-        AdminModel admin = new AdminModel();
-        String email = req.getParameter("email");
-        String password = req.getParameter("password");
-        List<AdminModel> admins = admin.where("where email = " + "'" + email + "'");
-        if (getMd5(password).equals(admins.get(0).getPassword())) { // TODO : lovely SQL injection <3
-            req.getSession().setAttribute("isLoggedInAdmin", "true");
-            req.getSession().setAttribute("adminEmail", email);
-            req.getSession().setAttribute("adminId", admins.get(0).getId());
-            req.getSession().setAttribute("adminName", admins.get(0).getName());
-            resp.setStatus(200);
-            return;
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        String uploadPath = getServletContext().getRealPath("") + File.separator + UPLOAD_DIRECTORY;
+        File uploadDir = new File(uploadPath);
+        if (!uploadDir.exists()) uploadDir.mkdir();
+
+        for (Part part : req.getParts()) {
+            String fileName = getFileName(part);
+            resp.getWriter().println(fileName);
+            part.write(uploadPath + File.separator + fileName);
         }
-        resp.setStatus(401);
+
+//        resp.setStatus(401);
     }
 
-    private static String getMd5(String input)
-    {
-        try {
-            MessageDigest md = MessageDigest.getInstance("MD5");
-
-            byte[] messageDigest = md.digest(input.getBytes());
-
-            BigInteger no = new BigInteger(1, messageDigest);
-
-            String hashtext = no.toString(16);
-            while (hashtext.length() < 32) {
-                hashtext = "0" + hashtext;
-            }
-            return hashtext;
+    private String getFileName(Part part) {
+        for (String content : part.getHeader("content-disposition").split(";")) {
+            if (content.trim().startsWith("filename"))
+                return content.substring(content.indexOf("=") + 2, content.length() - 1);
         }
-
-        catch (NoSuchAlgorithmException e) {
-            throw new RuntimeException(e);
-        }
+        return DEFAULT_FILENAME;
     }
 }
