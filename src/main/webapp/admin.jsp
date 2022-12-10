@@ -14,16 +14,30 @@
 <%@include file="components/navbar.jsp"%>
 
 <div class="container">
+    <% if (request.getParameter("uploaded") != null) {%>
+    <div class="alert alert-success" role="alert">
+        The file(s) are uploaded successfully
+    </div>
+    <% } %>
     <form
+            style="height: 75%"
             method="post"
             enctype="multipart/form-data"
             action="<%=Helper.getServerRoute(request)%>/admin"
     >
-        <input type="file" name="video">
-        <input type="submit" value="Upload" name="submit">
+        <br />
+        <br />
+        <br />
+        <input type="file" multiple name="video" class="form-control" id="customFile" />
+        <br />
+        <br />
+        <br />
+        <input class="form-control btn btn-success" type="submit" value="Upload" name="submit">
     </form>
 </div>
-
+<script>
+    window.history.replaceState({}, document.title, "/" + "admin");
+</script>
 <%@include file="components/footer.jsp"%>
 
 </body>

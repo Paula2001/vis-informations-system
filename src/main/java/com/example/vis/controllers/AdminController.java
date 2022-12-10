@@ -1,5 +1,6 @@
 package com.example.vis.controllers;
 
+import com.example.vis.helpers.Helper;
 import com.example.vis.models.AdminModel;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.MultipartConfig;
@@ -18,34 +19,39 @@ import java.util.List;
         maxFileSize = 1024 * 1024 * 5,
         maxRequestSize = 1024 * 1024 * 5 * 5)
 public class AdminController extends Controller {
-    private static final String UPLOAD_DIRECTORY = "/";
-    private static final String DEFAULT_FILENAME = "lol";
+    private static final String UPLOAD_DIRECTORY = "videos";
 
     @Override
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+        request.setAttribute("uploaded",request.getParameter("uploaded"));
         request.getRequestDispatcher("admin.jsp").forward(request, response);
     }
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        String uploadPath = getServletContext().getRealPath("") + File.separator + UPLOAD_DIRECTORY;
+        String uploadPath = getServletContext().getRealPath("") + UPLOAD_DIRECTORY;
+
         File uploadDir = new File(uploadPath);
-        if (!uploadDir.exists()) uploadDir.mkdir();
+
+        String succeded = "";
+
+        if (!uploadDir.exists()) {
+            uploadDir.mkdir();
+        };
 
         for (Part part : req.getParts()) {
-            String fileName = getFileName(part);
-            resp.getWriter().println(fileName);
-            part.write(uploadPath + File.separator + fileName);
+            String fileName = Helper.getFileName(part);
+            if (!fileName.equals("")) succeded = "?uploaded=true";
+
+            try {
+                part.write(uploadPath + File.separator + fileName);
+            }catch (IOException e){
+
+            }
         }
 
-//        resp.setStatus(401);
+        resp.sendRedirect(Helper.getServerRoute(req) + "/admin" + succeded);
     }
 
-    private String getFileName(Part part) {
-        for (String content : part.getHeader("content-disposition").split(";")) {
-            if (content.trim().startsWith("filename"))
-                return content.substring(content.indexOf("=") + 2, content.length() - 1);
-        }
-        return DEFAULT_FILENAME;
-    }
+
 }

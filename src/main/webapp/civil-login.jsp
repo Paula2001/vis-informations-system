@@ -92,8 +92,8 @@
 <script>
     $(".btnSubmit").click(() => {
         $.ajax({
-            url: "<%=Helper.getServerRoute(request)%>/admin-login",
-            method: "post",
+            url: "<%=Helper.getServerRoute(request)%>/civil-login",
+            method: "POST",
             data: {
               email : $("#email").val(),
               password: $("#password").val()

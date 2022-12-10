@@ -1,6 +1,7 @@
 package com.example.vis.helpers;
 
 import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.Part;
 
 import java.security.NoSuchAlgorithmException;
 import java.security.MessageDigest;
@@ -49,5 +50,14 @@ public class Helper {
         catch (NoSuchAlgorithmException e) {
             throw new RuntimeException(e);
         }
+    }
+
+    public static String getFileName(Part part) {
+        for (String content : part.getHeader("content-disposition").split(";")) {
+            if (content.trim().startsWith("filename")){
+                return content.substring(content.indexOf("=") + 2, content.length() - 1);
+            }
+        }
+        return "";
     }
 }
