@@ -98,7 +98,7 @@
               password: $("#password").val()
             },
             success: (e) => {
-                console.log(e);
+                window.location.replace(e);
             },
             error: (e) => {
                 console.log(e);

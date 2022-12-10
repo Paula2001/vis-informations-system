@@ -19,7 +19,7 @@ public class AdminAuthController extends HttpServlet {
 
 
     @Override
-    public void doPost(HttpServletRequest req, HttpServletResponse resp) {
+    public void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         AdminModel admin = new AdminModel();
         String email = req.getParameter("email");
         String password = req.getParameter("password");
@@ -29,6 +29,7 @@ public class AdminAuthController extends HttpServlet {
             req.getSession().setAttribute("adminEmail", email);
             req.getSession().setAttribute("adminId", admins.get(0).getId());
             req.getSession().setAttribute("adminName", admins.get(0).getName());
+            resp.getWriter().println("http://localhost:8080/admin");
             resp.setStatus(200);
             return;
         }

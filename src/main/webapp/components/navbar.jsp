@@ -1,5 +1,4 @@
 <%@ page import="java.util.List" %>
-<%@ page import="java.util.Map" %>
 <%@ page import="java.util.ArrayList" %>
 <%@ page import="java.util.HashMap" %>
 <%@ page import="com.example.vis.helpers.Helper" %><%
@@ -28,12 +27,6 @@
             "true"
     ));
 
-    routes.add(3, Helper.createRoute(
-            "http://localhost:8080/index.jsp",
-            "test",
-            "/",
-            "both"
-    ));
 
     Object isLoggedIn = request.getSession().getAttribute("isLoggedInAdmin");
 %>
@@ -63,7 +56,7 @@
             <% if( isLoggedIn != null && isLoggedIn.equals("true")) { %>
                 <form action="/admin-login">
                     <input type="hidden" name="_method" value="put" />
-                    <button style="float: right" class="danger">Logout</button>
+                    <button style="float: right;margin: 5px;" class="btn btn-danger">Logout</button>
                 </form>
             <% } %>
         </div>

@@ -1,20 +1,15 @@
 package com.example.vis.middlewares;
 
-import com.example.vis.controllers.AdminAuthController;
-import com.example.vis.controllers.AdminController;
 import jakarta.servlet.*;
+import java.io.IOException;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-
-import java.io.IOException;
-import java.io.PrintWriter;
 
 public class AdminLogin implements Filter{
 
     public void init(FilterConfig arg0) throws ServletException {}
 
-    public void doFilter(ServletRequest req, ServletResponse resp,
-                         FilterChain chain) throws IOException, ServletException {
+    public void doFilter(ServletRequest req, ServletResponse resp, FilterChain chain) throws IOException, ServletException {
         Object isLoggedInAdmin =  ((HttpServletRequest) req).getSession().getAttribute("isLoggedInAdmin");
         String valueOfSession = isLoggedInAdmin != null? isLoggedInAdmin.toString() : "false" ;
 
