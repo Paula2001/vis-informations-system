@@ -4759,6 +4759,15 @@
     </servlet-mapping>
 
     <servlet>
+        <servlet-name>paramedic</servlet-name>
+        <servlet-class>com.example.vis.controllers.ParamedicController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>paramedic</servlet-name>
+        <url-pattern>/paramedic</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
         <servlet-name>paramedic-login</servlet-name>
         <servlet-class>com.example.vis.controllers.ParamedicAuthController</servlet-class>
     </servlet>
