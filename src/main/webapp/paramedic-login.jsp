@@ -15,7 +15,7 @@
 
 <div class="container login-container">
     <div class="h-100 d-flex align-items-center justify-content-center login-form-1">
-        <h3>Admin Login</h3>
+        <h3>Paramedic Login</h3>
         <div>
             <div class="form-group">
                 <input id="email" type="text" class="form-control" placeholder="Your Email *" />

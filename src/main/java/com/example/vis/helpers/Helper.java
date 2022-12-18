@@ -14,13 +14,15 @@ public class Helper {
             String url,
             String name,
             String realRoute,
-            String isLoggedIn
+            String isLoggedIn,
+            String type
     ) {
         HashMap<String,String> homeRoute = new HashMap<>();
         homeRoute.put("url", url);
         homeRoute.put("name", name);
         homeRoute.put("realRoute", realRoute);
         homeRoute.put("isLoggedIn", isLoggedIn);
+        homeRoute.put("type", type);
         return homeRoute;
     }
 

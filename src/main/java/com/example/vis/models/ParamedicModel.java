@@ -4,22 +4,13 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class ParamedicModel extends Model<ParamedicModel> {
-    private final int id ;
-    private final String dataOfBirth;
-    private final String name;
-    private final String email;
+    private int id ;
+    private String dataOfBirth;
+    private String name;
+    private String email;
+    private boolean isAuthorized;
+    private String password;
 
-    private final String isAuthorized;
-    private final String password;
-
-    public ParamedicModel(int id, String dataOfBirth, String name, String email, String isAuthorized, String password) {
-        this.id = id;
-        this.dataOfBirth = dataOfBirth;
-        this.name = name;
-        this.email = email;
-        this.isAuthorized = isAuthorized;
-        this.password = password;
-    }
 
     public int getId() {
         return id;
@@ -40,7 +31,7 @@ public class ParamedicModel extends Model<ParamedicModel> {
         return password;
     }
 
-    public String getIsAuthorized() {
+    public boolean getIsAuthorized() {
         return isAuthorized;
     }
 
@@ -50,7 +41,17 @@ public class ParamedicModel extends Model<ParamedicModel> {
     }
 
     @Override
-    protected ParamedicModel getModelInstance(ResultSet result) throws SQLException {
-        return null;
+    protected ParamedicModel getModelInstance(ResultSet result) {
+        try {
+            this.id = Integer.parseInt(result.getString("id"));
+            this.name = result.getString("name");
+            this.email = result.getString("email");
+            this.password = result.getString("password");
+            this.dataOfBirth = result.getString("date_of_birth");
+            this.isAuthorized = Boolean.parseBoolean(result.getString("is_authorized"));
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
+        return this;
     }
 }
