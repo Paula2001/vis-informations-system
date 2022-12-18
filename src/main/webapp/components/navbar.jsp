@@ -101,7 +101,7 @@
             <form action="/paramedic-login">
                 <input type="hidden" name="_method" value="put" />
                 <button style="float: right;margin: 5px;" class="btn btn-danger">
-                    Welcome <%=loggedName %>, Logout from here
+                    Welcome <%=loggedName %>, xxx from here
                 </button>
             </form>
             <% } %>

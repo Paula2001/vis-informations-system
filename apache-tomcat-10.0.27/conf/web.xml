@@ -4759,11 +4759,11 @@
     </servlet-mapping>
 
     <servlet>
-        <servlet-name>paramedic</servlet-name>
+        <servlet-name>paramedic-login</servlet-name>
         <servlet-class>com.example.vis.controllers.ParamedicAuthController</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>paramedic</servlet-name>
+        <servlet-name>paramedic-login</servlet-name>
         <url-pattern>/paramedic-login</url-pattern>
     </servlet-mapping>
 
@@ -4777,6 +4777,23 @@
         <servlet-name>admin</servlet-name>
     </filter-mapping>
 
+<!--    <filter>-->
+<!--        <filter-name>ParamedicLogin</filter-name>-->
+<!--        <filter-class>com.example.vis.middlewares.ParamedicLogin</filter-class>-->
+<!--    </filter>-->
+<!--    <filter-mapping>-->
+<!--        <filter-name>ParamedicLogin</filter-name>-->
+<!--        <servlet-name>paramedic-login</servlet-name>-->
+<!--    </filter-mapping>-->
+
+    <filter>
+        <filter-name>ParamedicNotLogin</filter-name>
+        <filter-class>com.example.vis.middlewares.ParamedicNotLogin</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>ParamedicNotLogin</filter-name>
+        <servlet-name>paramedic-login</servlet-name>
+    </filter-mapping>
 
     <filter>
         <filter-name>AdminNotLogin</filter-name>

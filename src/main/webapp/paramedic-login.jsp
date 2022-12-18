@@ -92,7 +92,7 @@
 <script>
     $(".btnSubmit").click(() => {
         $.ajax({
-            url: "<%=Helper.getServerRoute(request)%>/civil-login",
+            url: "<%=Helper.getServerRoute(request)%>/paramedic-login",
             method: "POST",
             data: {
               email : $("#email").val(),
