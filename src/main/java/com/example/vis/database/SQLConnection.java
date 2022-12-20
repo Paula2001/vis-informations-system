@@ -42,8 +42,12 @@ public class SQLConnection implements DatabaseConnection<Connection>{
         return result;
     }
 
-    public void insertMany() {
-
+    public void insertMany(String tableName, ArrayList<HashMap<String, HashMap<String, String>>> values) throws SQLException, NamingException {
+        ArrayList<Integer> ids = new ArrayList<Integer>();
+        for (HashMap<String, HashMap<String, String>> val:values) {
+            ids.add(this.insert(tableName,val));
+        }
+        // return the array of ids;
     }
 
     public int insert(String tableName,HashMap<String, HashMap<String, String>> values) throws SQLException, NamingException {

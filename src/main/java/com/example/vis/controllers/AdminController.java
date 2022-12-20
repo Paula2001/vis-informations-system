@@ -3,6 +3,7 @@ package com.example.vis.controllers;
 import com.example.vis.helpers.Helper;
 import com.example.vis.models.AdminModel;
 import com.example.vis.models.TutorialModel;
+import com.example.vis.models.VideoModel;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.MultipartConfig;
 import jakarta.servlet.http.HttpServlet;
@@ -35,7 +36,7 @@ public class AdminController extends Controller {
         String tutorialDescription = req.getParameter("tutorial_description");
         tutorialModel.setName(tutorialName);
         tutorialModel.setDescription(tutorialDescription);
-        System.out.println(tutorialModel.insert());
+        int tutorialID = tutorialModel.insert();
         String uploadPath = getServletContext().getRealPath("") + UPLOAD_DIRECTORY;
 
         File uploadDir = new File(uploadPath);
@@ -48,13 +49,18 @@ public class AdminController extends Controller {
 
         for (Part part : req.getParts()) {
             String fileName = Helper.getFileName(part);
-            if (!fileName.equals("")) succeded = "?uploaded=true";
+            if (!fileName.equals("")){
+                VideoModel videoModel = new VideoModel(fileName,tutorialID);
+                videoModel.insert();
+                succeded = "?uploaded=true";
 
-            try {
-                part.write(uploadPath + File.separator + fileName);
-            }catch (IOException e){
-                System.out.println(e.getMessage());
+                try {
+                    part.write(uploadPath + File.separator + fileName);
+                }catch (IOException e){
+                    System.out.println(e.getMessage());
+                }
             }
+
         }
 
         resp.sendRedirect(Helper.getServerRoute(req) + "/admin" + succeded);
