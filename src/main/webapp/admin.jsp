@@ -28,6 +28,13 @@
         <br />
         <br />
         <br />
+        <label>Tutorial name</label>
+        <input placeholder="Tutorial description" name="tutorial_name" type="text" class="form-control">
+        <label>Tutorial description</label>
+        <textarea class="form-control" name="tutorial_description" placeholder="Tutorial description"></textarea>
+        <br />
+        <br />
+        <br />
         <input type="file" multiple name="video" class="form-control" id="customFile" />
         <br />
         <br />

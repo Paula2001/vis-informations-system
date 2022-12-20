@@ -2,6 +2,8 @@ package com.example.vis.models;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.HashMap;
 
 public class AdminModel extends Model<AdminModel> {
     private int id ;
@@ -42,5 +44,15 @@ public class AdminModel extends Model<AdminModel> {
             System.out.println(e.getMessage());
         }
         return this;
+    }
+
+    @Override
+    protected HashMap<String, HashMap<String, String>> getData() {
+        return new HashMap<>();
+    }
+
+    @Override
+    protected ArrayList<String> getCols() {
+        return null;
     }
 }

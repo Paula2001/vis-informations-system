@@ -2,17 +2,14 @@ package com.example.vis.models;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.HashMap;
 
 public class TutorialModel extends Model<TutorialModel> {
-    private final int id ;
-    private final String name;
-    private final String description;
+    private int id ;
+    private String name;
+    private String description;
 
-    public TutorialModel(int id, String name, String description, String password) {
-        this.id = id;
-        this.name = name;
-        this.description = description;
-    }
 
     public int getId() {
         return id;
@@ -33,6 +30,51 @@ public class TutorialModel extends Model<TutorialModel> {
 
     @Override
     protected TutorialModel getModelInstance(ResultSet result) throws SQLException {
-        return null;
+        this.id = Integer.parseInt(result.getString("id"));
+        this.name = result.getString("name");
+        this.description = result.getString("description");
+        return this;
+    }
+    @Override
+    protected HashMap<String, HashMap<String, String>> getData() {
+        var data = new HashMap<String, HashMap<String, String>>();
+
+        if (this.id != 0){
+            var id = new HashMap<String, String>();
+            id.put("type","int");
+            id.put("value", Integer.toString(this.id));
+            data.put("id" , id);
+        }
+
+        var name = new HashMap<String, String>();
+        name.put("type","string");
+        name.put("value", this.name);
+        var description = new HashMap<String, String>();
+        description.put("type","string");
+        description.put("value", this.description);
+
+        data.put("name" , name);
+        data.put("description" , description);
+        return data;
+    }
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    @Override
+    protected ArrayList<String> getCols() {
+        ArrayList<String> cols =  new ArrayList<String>();
+        cols.add("id");
+        cols.add("name");
+        cols.add("description");
+        return cols;
     }
 }

@@ -2,6 +2,8 @@ package com.example.vis.models;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.HashMap;
 
 public class CertificationModel extends Model<CertificationModel> {
     private final int id ;
@@ -39,6 +41,17 @@ public class CertificationModel extends Model<CertificationModel> {
 
     @Override
     protected CertificationModel getModelInstance(ResultSet result) throws SQLException {
+        return null;
+    }
+
+
+    @Override
+    protected HashMap<String, HashMap<String, String>> getData() {
+        return new HashMap<>();
+    }
+
+    @Override
+    protected ArrayList<String> getCols() {
         return null;
     }
 }

@@ -1,9 +1,8 @@
 package com.example.vis.database;
 
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
+import java.util.ArrayList;
+import java.util.HashMap;
 
 
 import javax.naming.Context;
@@ -47,9 +46,47 @@ public class SQLConnection implements DatabaseConnection<Connection>{
 
     }
 
-    public void insert() {
+    public int insert(String tableName,HashMap<String, HashMap<String, String>> values) throws SQLException, NamingException {
+        var wrapper = new Object(){
+            int len = 0;
+            String cols = "";
+            String questionMarks = "";
+        };
+        values.forEach((k, v) -> {
+            ++wrapper.len;
+            String trailingComma = wrapper.len < values.size() ? ",": "";
+            wrapper.cols += k + trailingComma;
+            wrapper.questionMarks += "?" + trailingComma;
 
+        });
+        var instance = this;
+        wrapper.len = 0;
+        String string = "INSERT INTO " + tableName + "( " + wrapper.cols+ " )" + " VALUES " + "(" + wrapper.questionMarks +  ")";
+        PreparedStatement preparedStatement = instance.getConnection().prepareStatement(string);
+        values.forEach((k, v) -> {
+            if(v.get("value") != null) {
+                ++wrapper.len;
+                switch (v.get("type")) {
+                    case "string":
+                        try {
+                            preparedStatement.setString(wrapper.len,v.get("value"));
+                        } catch (SQLException e) {
+                            System.out.println(e.getMessage());
+                        }
+                        break;
+                    case "int":
+                        try {
+                            preparedStatement.setInt(wrapper.len ,Integer.parseInt(v.get("value")));
+                        } catch (SQLException e) {
+                            System.out.println(e.getMessage());
+                        }
+                }
+            }
+
+        });
+        return preparedStatement.executeUpdate();
     }
+
 
     public void update(){
 

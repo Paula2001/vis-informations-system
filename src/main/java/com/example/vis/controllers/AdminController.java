@@ -2,6 +2,7 @@ package com.example.vis.controllers;
 
 import com.example.vis.helpers.Helper;
 import com.example.vis.models.AdminModel;
+import com.example.vis.models.TutorialModel;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.MultipartConfig;
 import jakarta.servlet.http.HttpServlet;
@@ -29,6 +30,12 @@ public class AdminController extends Controller {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        TutorialModel tutorialModel = new TutorialModel();
+        String tutorialName = req.getParameter("tutorial_name");
+        String tutorialDescription = req.getParameter("tutorial_description");
+        tutorialModel.setName(tutorialName);
+        tutorialModel.setDescription(tutorialDescription);
+        tutorialModel.insert();
         String uploadPath = getServletContext().getRealPath("") + UPLOAD_DIRECTORY;
 
         File uploadDir = new File(uploadPath);
@@ -46,7 +53,7 @@ public class AdminController extends Controller {
             try {
                 part.write(uploadPath + File.separator + fileName);
             }catch (IOException e){
-
+                System.out.println(e.getMessage());
             }
         }
 
