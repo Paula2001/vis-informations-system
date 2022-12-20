@@ -9,10 +9,23 @@ public class VideoModel extends Model<VideoModel> {
     private int id ;
     private String url;
     private int tutorialId;
+    private TutorialModel tutorialModel;
 
     public VideoModel(String url, int tutorialId ){
         this.url = url;
         this.tutorialId = tutorialId;
+    }
+
+    public VideoModel(){
+
+    }
+
+    public TutorialModel getTutorialModel() {
+        return tutorialModel;
+    }
+
+    public void setTutorialModel(TutorialModel tutorialModel) {
+        this.tutorialModel = tutorialModel;
     }
 
     public int getId() {
@@ -28,19 +41,19 @@ public class VideoModel extends Model<VideoModel> {
     }
 
     @Override
-    protected String getTableName() {
+    public String getTableName() {
         return "video";
     }
 
     @Override
-    protected VideoModel getModelInstance(ResultSet result) throws SQLException {
+    public VideoModel getModelInstance(ResultSet result) throws SQLException {
         this.id = result.getInt("id");
         this.tutorialId = result.getInt("tutorial_id");
         this.url = result.getString("url");
         return this;
     }
     @Override
-    protected HashMap<String, HashMap<String, String>> getData() {
+    public HashMap<String, HashMap<String, String>> getData() {
         var data = new HashMap<String, HashMap<String, String>>();
 
         if (this.id != 0){
@@ -75,7 +88,7 @@ public class VideoModel extends Model<VideoModel> {
     }
 
     @Override
-    protected ArrayList<String> getCols() {
+    public ArrayList<String> getCols() {
         ArrayList<String> cols =  new ArrayList<String>();
         cols.add("id");
         cols.add("name");

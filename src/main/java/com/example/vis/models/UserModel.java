@@ -40,22 +40,22 @@ public class UserModel extends Model<UserModel> {
     }
 
     @Override
-    protected String getTableName() {
+    public String getTableName() {
         return "user";
     }
 
     @Override
-    protected UserModel getModelInstance(ResultSet result) throws SQLException {
+    public UserModel getModelInstance(ResultSet result) throws SQLException {
         return null;
     }
 
     @Override
-    protected HashMap<String, HashMap<String, String>> getData() {
+    public HashMap<String, HashMap<String, String>> getData() {
         return new HashMap<>();
     }
 
     @Override
-    protected ArrayList<String> getCols() {
+    public ArrayList<String> getCols() {
         return null;
     }
 }

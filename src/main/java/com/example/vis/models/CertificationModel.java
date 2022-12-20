@@ -35,23 +35,23 @@ public class CertificationModel extends Model<CertificationModel> {
     }
 
     @Override
-    protected String getTableName() {
+    public String getTableName() {
         return "certification";
     }
 
     @Override
-    protected CertificationModel getModelInstance(ResultSet result) throws SQLException {
+    public CertificationModel getModelInstance(ResultSet result) throws SQLException {
         return null;
     }
 
 
     @Override
-    protected HashMap<String, HashMap<String, String>> getData() {
+    public HashMap<String, HashMap<String, String>> getData() {
         return new HashMap<>();
     }
 
     @Override
-    protected ArrayList<String> getCols() {
+    public ArrayList<String> getCols() {
         return null;
     }
 }

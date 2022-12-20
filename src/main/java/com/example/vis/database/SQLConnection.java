@@ -1,5 +1,6 @@
 package com.example.vis.database;
 
+import com.example.vis.models.IModel;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -10,7 +11,7 @@ import javax.naming.InitialContext;
 import javax.naming.NamingException;
 import javax.sql.DataSource;
 
-public class SQLConnection implements DatabaseConnection<Connection>{
+public class SQLConnection implements IDatabaseConnection<Connection> {
 
     @Override
     public Connection getConnection() throws SQLException, NamingException {
@@ -36,9 +37,10 @@ public class SQLConnection implements DatabaseConnection<Connection>{
             Statement statement = this.getConnection().createStatement();
             result = statement.executeQuery(sqlQ);
         } catch (SQLException|NamingException e) {
-            // TODO : should log the error message
+            this.closeConnection();
             System.out.println(e.getMessage());
         }
+        this.closeConnection();
         return result;
     }
 
@@ -75,6 +77,7 @@ public class SQLConnection implements DatabaseConnection<Connection>{
                         try {
                             preparedStatement.setString(wrapper.len,v.get("value"));
                         } catch (SQLException e) {
+                            this.closeConnection();
                             System.out.println(e.getMessage());
                         }
                         break;
@@ -82,7 +85,9 @@ public class SQLConnection implements DatabaseConnection<Connection>{
                         try {
                             preparedStatement.setInt(wrapper.len ,Integer.parseInt(v.get("value")));
                         } catch (SQLException e) {
+                            this.closeConnection();
                             System.out.println(e.getMessage());
+
                         }
                 }
             }
@@ -91,9 +96,32 @@ public class SQLConnection implements DatabaseConnection<Connection>{
         preparedStatement.execute();
         ResultSet result = preparedStatement.getGeneratedKeys();
         result.next();
-        return result.getInt(1);
+        int id = result.getInt(1);
+        this.closeConnection();
+        return id;
     }
 
+    public void closeConnection() {
+        try {
+            this.getConnection().close();
+        } catch (SQLException | NamingException ex) {
+            throw new RuntimeException(ex);
+        }
+    }
+
+    @Override
+    public ArrayList<ArrayList<IModel>> getWithJoin(IModel firstModel, IModel secondModel) throws SQLException, NamingException {
+        ArrayList<ArrayList<IModel>> modelsArray = new ArrayList<ArrayList<IModel>>();
+        ResultSet result = this.getConnection().createStatement().executeQuery("select * from video join tutorial tutorial on tutorial.id = video.tutorial_id");
+        int x = 0;
+        while (result.next()) {
+            ArrayList<IModel> modelArray = new ArrayList<>();
+            modelArray.add((IModel) firstModel.getModelInstance(result));
+            modelArray.add((IModel) secondModel.getModelInstance(result));
+            modelsArray.add(modelArray);
+        }
+        return modelsArray;
+    }
 
     public void update(){
 

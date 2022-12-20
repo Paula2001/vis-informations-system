@@ -38,12 +38,12 @@ public class ParamedicModel extends Model<ParamedicModel> {
     }
 
     @Override
-    protected String getTableName() {
+    public String getTableName() {
         return "paramedic";
     }
 
     @Override
-    protected ParamedicModel getModelInstance(ResultSet result) {
+    public ParamedicModel getModelInstance(ResultSet result) {
         try {
             this.id = Integer.parseInt(result.getString("id"));
             this.name = result.getString("name");
@@ -59,12 +59,12 @@ public class ParamedicModel extends Model<ParamedicModel> {
 
 
     @Override
-    protected HashMap<String, HashMap<String, String>> getData() {
+    public HashMap<String, HashMap<String, String>> getData() {
         return new HashMap<>();
     }
 
     @Override
-    protected ArrayList<String> getCols() {
+    public ArrayList<String> getCols() {
         return null;
     }
 }

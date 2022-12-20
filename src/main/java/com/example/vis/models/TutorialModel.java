@@ -9,8 +9,6 @@ public class TutorialModel extends Model<TutorialModel> {
     private int id ;
     private String name;
     private String description;
-
-
     public int getId() {
         return id;
     }
@@ -24,19 +22,19 @@ public class TutorialModel extends Model<TutorialModel> {
     }
 
     @Override
-    protected String getTableName() {
+    public String getTableName() {
         return "tutorial";
     }
 
     @Override
-    protected TutorialModel getModelInstance(ResultSet result) throws SQLException {
+    public TutorialModel getModelInstance(ResultSet result) throws SQLException {
         this.id = Integer.parseInt(result.getString("id"));
         this.name = result.getString("name");
         this.description = result.getString("description");
         return this;
     }
     @Override
-    protected HashMap<String, HashMap<String, String>> getData() {
+    public HashMap<String, HashMap<String, String>> getData() {
         var data = new HashMap<String, HashMap<String, String>>();
 
         if (this.id != 0){
@@ -70,7 +68,7 @@ public class TutorialModel extends Model<TutorialModel> {
     }
 
     @Override
-    protected ArrayList<String> getCols() {
+    public ArrayList<String> getCols() {
         ArrayList<String> cols =  new ArrayList<String>();
         cols.add("id");
         cols.add("name");

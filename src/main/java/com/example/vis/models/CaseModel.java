@@ -40,23 +40,23 @@ public class CaseModel extends Model<CaseModel> {
     }
 
     @Override
-    protected String getTableName() {
+    public String getTableName() {
         return "cases";
     }
 
     @Override
-    protected CaseModel getModelInstance(ResultSet result) throws SQLException {
+    public CaseModel getModelInstance(ResultSet result) throws SQLException {
         return null;
     }
 
 
     @Override
-    protected HashMap<String, HashMap<String, String>> getData() {
+    public HashMap<String, HashMap<String, String>> getData() {
         return new HashMap<>();
     }
 
     @Override
-    protected ArrayList<String> getCols() {
+    public ArrayList<String> getCols() {
         return null;
     }
 }

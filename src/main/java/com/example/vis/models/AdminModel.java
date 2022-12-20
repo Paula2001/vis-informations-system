@@ -5,7 +5,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-public class AdminModel extends Model<AdminModel> {
+public class AdminModel extends Model<AdminModel>  {
     private int id ;
     private String name;
     private String email;
@@ -29,12 +29,12 @@ public class AdminModel extends Model<AdminModel> {
     }
 
     @Override
-    protected String getTableName() {
+    public String getTableName() {
         return "admin";
     }
 
     @Override
-    protected AdminModel getModelInstance(ResultSet result) {
+    public AdminModel getModelInstance(ResultSet result) {
         try {
             this.id = Integer.parseInt(result.getString("id"));
             this.name = result.getString("name");
@@ -47,12 +47,12 @@ public class AdminModel extends Model<AdminModel> {
     }
 
     @Override
-    protected HashMap<String, HashMap<String, String>> getData() {
+    public HashMap<String, HashMap<String, String>> getData() {
         return new HashMap<>();
     }
 
     @Override
-    protected ArrayList<String> getCols() {
+    public ArrayList<String> getCols() {
         return null;
     }
 }
