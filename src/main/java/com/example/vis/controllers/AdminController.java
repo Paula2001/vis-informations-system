@@ -35,7 +35,7 @@ public class AdminController extends Controller {
         String tutorialDescription = req.getParameter("tutorial_description");
         tutorialModel.setName(tutorialName);
         tutorialModel.setDescription(tutorialDescription);
-        tutorialModel.insert();
+        System.out.println(tutorialModel.insert());
         String uploadPath = getServletContext().getRealPath("") + UPLOAD_DIRECTORY;
 
         File uploadDir = new File(uploadPath);

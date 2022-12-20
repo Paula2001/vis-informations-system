@@ -62,7 +62,7 @@ public class SQLConnection implements DatabaseConnection<Connection>{
         var instance = this;
         wrapper.len = 0;
         String string = "INSERT INTO " + tableName + "( " + wrapper.cols+ " )" + " VALUES " + "(" + wrapper.questionMarks +  ")";
-        PreparedStatement preparedStatement = instance.getConnection().prepareStatement(string);
+        PreparedStatement preparedStatement = instance.getConnection().prepareStatement(string, Statement.RETURN_GENERATED_KEYS);
         values.forEach((k, v) -> {
             if(v.get("value") != null) {
                 ++wrapper.len;
@@ -84,7 +84,10 @@ public class SQLConnection implements DatabaseConnection<Connection>{
             }
 
         });
-        return preparedStatement.executeUpdate();
+        preparedStatement.execute();
+        ResultSet result = preparedStatement.getGeneratedKeys();
+        result.next();
+        return result.getInt(1);
     }
 
 
