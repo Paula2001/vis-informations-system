@@ -16,7 +16,7 @@
     const video = document.getElementsByTagName('video')[0];
     let arr = [];
     let setArrayOnce = false;
-    video.onplaying = function (e) {
+    video.onplaying = function () {
         let len = Math.round(video.duration);
         if (setArrayOnce === false){
             for (let i = 0; i < 5; i++) {
@@ -35,6 +35,15 @@
     video.onended = function(e) {
         if (arr.length === 0) {
             alert("you can move to the next tutorial");
+            $.ajax({
+                url: "<%=Helper.getServerRoute(request)%>/video?video_id=<%=request.getAttribute("video_id")%>",
+                method: "PUT",
+                success: (e) => {
+                    console.log(e);
+                },
+                error: (e) => {
+                }
+            });
         }else{
             alert("please re-watch the tutorial")
             arr = [];

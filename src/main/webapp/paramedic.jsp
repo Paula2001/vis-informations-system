@@ -1,6 +1,7 @@
 <%@ page import="com.example.vis.models.IModel" %>
 <%@ page import="com.example.vis.models.VideoModel" %>
-<%@ page import="com.example.vis.models.TutorialModel" %><%--
+<%@ page import="com.example.vis.models.TutorialModel" %>
+<%@ page import="com.example.vis.models.ParamedicsVideosModel" %><%--
   Created by IntelliJ IDEA.
   User: paula
   Date: 12/8/22
@@ -25,11 +26,16 @@
             <br />
             <h3><%=((TutorialModel) x[0]).getDescription()%></h3>
         <% } %>
-        <a href="/video?id=<%=((VideoModel)x[1]).getId()%>&tutorialName=<%=((TutorialModel) x[0]).getName()%>">
-            <video class="col-sm-4">
-                <source src="<%="videos/"  + ((VideoModel)x[1]).getUrl()%>" type="video/mp4">
-            </video>
-        </a>
+        <div class="col-sm-4">
+            <a href="/video?id=<%=((VideoModel)x[1]).getId()%>&tutorialName=<%=((TutorialModel) x[0]).getName()%>">
+                <video>
+                    <source src="<%="videos/"  + ((VideoModel)x[1]).getUrl()%>" type="video/mp4">
+                </video>
+            </a>
+            <% if (((ParamedicsVideosModel) x[2]).getIs_watched() != 0) { %>
+                <p>This video is already watched</p>
+            <% } %>
+        </div>
 
     <% } %>
 <%--    <div class="container">--%>

@@ -110,18 +110,24 @@ public class SQLConnection implements IDatabaseConnection<Connection> {
     }
 
     @Override
-    public ArrayList<IModel[]> getWithJoin(IModel firstModel, IModel secondModel) throws SQLException, NamingException {
+    public ArrayList<IModel[]> getWithJoin(IModel firstModel, IModel secondModel , IModel thirdModel) throws SQLException, NamingException {
         ArrayList<IModel[]> modelsArray = new ArrayList();
-        ResultSet result = this.getConnection().createStatement().executeQuery("select * from video join tutorial tutorial on tutorial.id = video.tutorial_id");
-        while (result.next()) {
-            IModel[] modelArray = {(IModel) firstModel.getModelInstance(result), (IModel) secondModel.getModelInstance(result)};
+        ResultSet result = this.getConnection().createStatement().executeQuery("select * from video join tutorial tutorial on tutorial.id = video.tutorial_id left join paramedics_videos pv on video.id = pv.video_id");
+        while (result.next()) {// TODO this should be removed and apply query builder
+            IModel[] modelArray = {
+                    (IModel) firstModel.getModelInstance(result),
+                    (IModel) secondModel.getModelInstance(result),
+                    (IModel)  thirdModel.getModelInstance(result)
+            };
             modelsArray.add(modelArray);
         }
         return modelsArray;
     }
 
-    public void update(){
-
+    public void update(String videoId) throws SQLException, NamingException {
+        System.out.println("________________________________");
+        System.out.println(videoId);
+        this.getConnection().createStatement().execute("UPDATE paramedics_videos set is_watched = 1 WHERE video_id = "+ videoId +" AND paramedic_id = 1"); // TODO we need to make this related to the model
     }
 
     public void updateMany() {

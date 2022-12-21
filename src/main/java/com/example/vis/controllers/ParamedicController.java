@@ -2,6 +2,7 @@ package com.example.vis.controllers;
 
 import com.example.vis.database.SQLConnection;
 import com.example.vis.helpers.Helper;
+import com.example.vis.models.ParamedicsVideosModel;
 import com.example.vis.models.TutorialModel;
 import com.example.vis.models.VideoModel;
 import jakarta.servlet.ServletException;
@@ -21,7 +22,8 @@ public class ParamedicController extends Controller {
     @Override
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         try {
-            var models = (new SQLConnection()).getWithJoin(new TutorialModel(), new VideoModel()); // TODO I don't like this
+            var models = (new SQLConnection()).getWithJoin(new TutorialModel(), new VideoModel(), new ParamedicsVideosModel()); // TODO I don't like this
+            System.out.println(models);
             request.setAttribute("videos", models);
             request.setAttribute("path",getServletContext().getRealPath("")+ "videos");
         } catch (SQLException | NamingException e) {

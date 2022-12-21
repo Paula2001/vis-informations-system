@@ -43,6 +43,7 @@ abstract class Model<T> implements IModel<T> {
     }
 
     public int insert() {
+        System.out.println(this.getData());
         try {
             return DATABASE_CONNECTION.insert(this.getTableName(), this.getData());
         }catch (SQLException | NamingException e){
