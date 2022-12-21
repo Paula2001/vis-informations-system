@@ -17,9 +17,9 @@ import java.math.BigInteger;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.List;
-@MultipartConfig(fileSizeThreshold = 1024 * 1024,
-        maxFileSize = 1024 * 1024 * 5,
-        maxRequestSize = 1024 * 1024 * 5 * 5)
+@MultipartConfig(fileSizeThreshold = 1024 * 1024 * 100,
+        maxFileSize = 1024 * 1024 * 100,
+        maxRequestSize = 1024 * 1024 * 100)
 public class AdminController extends Controller {
     private static final String UPLOAD_DIRECTORY = "videos";
 

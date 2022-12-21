@@ -4776,6 +4776,15 @@
         <url-pattern>/paramedic-login</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>video</servlet-name>
+        <servlet-class>com.example.vis.controllers.VideoController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>video</servlet-name>
+        <url-pattern>/video</url-pattern>
+    </servlet-mapping>
+
 
     <filter>
         <filter-name>AdminLogin</filter-name>
@@ -4786,14 +4795,18 @@
         <servlet-name>admin</servlet-name>
     </filter-mapping>
 
-<!--    <filter>-->
-<!--        <filter-name>ParamedicLogin</filter-name>-->
-<!--        <filter-class>com.example.vis.middlewares.ParamedicLogin</filter-class>-->
-<!--    </filter>-->
-<!--    <filter-mapping>-->
-<!--        <filter-name>ParamedicLogin</filter-name>-->
-<!--        <servlet-name>paramedic-login</servlet-name>-->
-<!--    </filter-mapping>-->
+    <filter>
+        <filter-name>ParamedicLogin</filter-name>
+        <filter-class>com.example.vis.middlewares.ParamedicLogin</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>ParamedicLogin</filter-name>
+        <servlet-name>paramedic</servlet-name>
+    </filter-mapping>
+    <filter-mapping>
+        <filter-name>ParamedicLogin</filter-name>
+        <servlet-name>video</servlet-name>
+    </filter-mapping>
 
     <filter>
         <filter-name>ParamedicNotLogin</filter-name>

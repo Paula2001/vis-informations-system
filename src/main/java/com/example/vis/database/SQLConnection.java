@@ -110,14 +110,11 @@ public class SQLConnection implements IDatabaseConnection<Connection> {
     }
 
     @Override
-    public ArrayList<ArrayList<IModel>> getWithJoin(IModel firstModel, IModel secondModel) throws SQLException, NamingException {
-        ArrayList<ArrayList<IModel>> modelsArray = new ArrayList<ArrayList<IModel>>();
+    public ArrayList<IModel[]> getWithJoin(IModel firstModel, IModel secondModel) throws SQLException, NamingException {
+        ArrayList<IModel[]> modelsArray = new ArrayList();
         ResultSet result = this.getConnection().createStatement().executeQuery("select * from video join tutorial tutorial on tutorial.id = video.tutorial_id");
-        int x = 0;
         while (result.next()) {
-            ArrayList<IModel> modelArray = new ArrayList<>();
-            modelArray.add((IModel) firstModel.getModelInstance(result));
-            modelArray.add((IModel) secondModel.getModelInstance(result));
+            IModel[] modelArray = {(IModel) firstModel.getModelInstance(result), (IModel) secondModel.getModelInstance(result)};
             modelsArray.add(modelArray);
         }
         return modelsArray;

@@ -17,5 +17,5 @@ public interface IDatabaseConnection<T> {
 
     void closeConnection();
 
-    ArrayList<ArrayList<IModel>> getWithJoin(IModel x, IModel y) throws SQLException, NamingException;
+    ArrayList<IModel[]> getWithJoin(IModel x, IModel y) throws SQLException, NamingException;
 }

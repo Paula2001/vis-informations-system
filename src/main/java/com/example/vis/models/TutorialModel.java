@@ -28,10 +28,11 @@ public class TutorialModel extends Model<TutorialModel> {
 
     @Override
     public TutorialModel getModelInstance(ResultSet result) throws SQLException {
-        this.id = Integer.parseInt(result.getString("id"));
-        this.name = result.getString("name");
-        this.description = result.getString("description");
-        return this;
+        var x = new TutorialModel();
+        x.id = Integer.parseInt(result.getString("id"));
+        x.name = result.getString("name");
+        x.description = result.getString("description");
+        return x;
     }
     @Override
     public HashMap<String, HashMap<String, String>> getData() {

@@ -23,6 +23,7 @@ public class ParamedicController extends Controller {
         try {
             var models = (new SQLConnection()).getWithJoin(new TutorialModel(), new VideoModel()); // TODO I don't like this
             request.setAttribute("videos", models);
+            request.setAttribute("path",getServletContext().getRealPath("")+ "videos");
         } catch (SQLException | NamingException e) {
             System.out.println(e.getMessage());
         }

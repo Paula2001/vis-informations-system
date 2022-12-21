@@ -47,10 +47,11 @@ public class VideoModel extends Model<VideoModel> {
 
     @Override
     public VideoModel getModelInstance(ResultSet result) throws SQLException {
-        this.id = result.getInt("id");
-        this.tutorialId = result.getInt("tutorial_id");
-        this.url = result.getString("url");
-        return this;
+        var x = new VideoModel();
+        x.id = result.getInt("id");
+        x.tutorialId = result.getInt("tutorial_id");
+        x.url = result.getString("url");
+        return x;
     }
     @Override
     public HashMap<String, HashMap<String, String>> getData() {

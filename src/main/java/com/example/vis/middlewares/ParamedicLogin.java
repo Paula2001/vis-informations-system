@@ -11,8 +11,8 @@ public class ParamedicLogin implements Filter{
     public void init(FilterConfig arg0) throws ServletException {}
 
     public void doFilter(ServletRequest req, ServletResponse resp, FilterChain chain) throws IOException, ServletException {
-        Object isLoggedInAdmin =  ((HttpServletRequest) req).getSession().getAttribute("isLoggedInParamedic");
-        String valueOfSession = isLoggedInAdmin != null? isLoggedInAdmin.toString() : "false" ;
+        Object isParamedicLogin =  ((HttpServletRequest) req).getSession().getAttribute("isLoggedParamedic");
+        String valueOfSession = isParamedicLogin != null? isParamedicLogin.toString() : "false" ;
 
         if (valueOfSession.equals("true")){
             chain.doFilter(req, resp);
